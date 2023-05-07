@@ -7,10 +7,10 @@
 }
 
 :root{
-    --menu_mobile_length: 24px;
-    --menu_mobile_weight: 2px;
-    --menu_mobile_space_between: 2.2;
-    --menu_mobile_color: white;
+    --menu_icon_length: 24px;
+    --menu_icon_weight: 2px;
+    --menu_icon_space_between: 2.2;
+    --menu_icon_color: white;
 }
 
 body{
@@ -40,8 +40,12 @@ img{
     margin: 0 auto;
 }
 
+.noscroll{
+    overflow: hidden;
+}
 
-/* TOP-BAR */
+
+/*! TOP-BAR */
 
 .top-bar{
     padding: 20px 0;
@@ -115,14 +119,14 @@ img{
 }
 
 
-/* MENU BURGER*/
+/*! MENU BURGER*/
 
 .menu-icon-wrapper {
     background-color: #4DAE18;
     border-radius: 8px;
     padding: 5px;
-    width: calc(var(--menu_mobile_length) + 11px);
-    height: calc(var(--menu_mobile_length) + 11px);
+    width: calc(var(--menu_icon_length) + 11px);
+    height: calc(var(--menu_icon_length) + 11px);
     display: none;
     justify-content: center;
     align-items: center;
@@ -131,57 +135,221 @@ img{
   
   .menu-icon {
     position: relative;
-    width: var(--menu_mobile_length);
-    height: var(--menu_mobile_weight);
-    background-color: var(--menu_mobile_color);
+    width: var(--menu_icon_length);
+    height: var(--menu_icon_weight);
+    background-color: var(--menu_icon_color);
     border-radius: 2px;
   }
   
-  .menu-icon::before {
-    position: absolute;
-    left: 0;
-    top: -5px;
-    content: '';
-    width: var(--menu_mobile_length);
-    height: var(--menu_mobile_weight);
-    background-color: var(--menu_mobile_color);
-    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
-    border-radius: 2px;
-  
-  }
-  
+  .menu-icon::before,
   .menu-icon::after {
+    content: '';
     position: absolute;
     left: 0;
-    top: 5px;
-    content: '';
-    width: var(--menu_mobile_length);
-    height: var(--menu_mobile_weight);
-    background-color: var(--menu_mobile_color);
+    width: var(--menu_icon_length);
+    height: var(--menu_icon_weight);
+    background-color: var(--menu_icon_color);
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
     border-radius: 2px;
   
+  }
+  .menu-icon::before{
+    top: -5px;
+  }  
+  .menu-icon::after {
+    top: 5px;  
   }
   
   .menu-icon.menu-icon-active {
     background-color: transparent;
   }
   
+  .menu-icon.menu-icon-active::before,
+  .menu-icon.menu-icon-active::after {
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
   .menu-icon.menu-icon-active::before {
     transform: rotate(45deg);
-    top: 0;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
   }
-  
   .menu-icon.menu-icon-active::after {
     transform: rotate(-45deg);
-    top: 0;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
   }
 
 
+  /*! MENU NAV */
+
+  .menu-nav-wrapper{
+    background: #70BB18;
+    color: #fff;
+  }
+  .menu-nav-list{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .menu-nav-item{
+    position: relative;
+    font-size: 18px;
+    padding: 20px 0;
+  }
+  .menu-nav-item .link{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .menu-nav-item .underline{
+    display: none;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #232323;
+    transition: .2s linear;
+  }
+  .menu-nav-item.active .underline{
+    display: block;
+  }
+  .menu-nav-item:hover .underline{
+    display: block;
+  }
+  .menu-nav-item .arrow-icon{
+    width: 16px;
+    height: 16px;
+    transition: .2s linear;
+  }
+  .menu-nav-item .link:hover{
+    transform: scale(1.03);
+  }
+  .menu-nav-item:hover .arrow-icon{
+    transform: rotate(180deg);
+    transition: .2s linear;
+  }
+
+  .menu-nav-item .sub-menu{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    color: #232323;
+    width: max-content;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0px 0px 12px 12px;
+  }
+  .menu-nav-item:hover .sub-menu{
+    display: block;
+  }
+  .menu-nav-item .sub-menu-list{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .menu-nav-item .sub-menu-item:hover{
+    transform: scale(1.03);
+  }
 
 
+  /*! MENU MOBILE */
+
+.menu-mobile-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+}
+.menu-mobile-wrapper.active{
+    display: block;
+}
+.menu-mobile {
+    padding: 20px;
+    background: #fff;
+    position: absolute;
+    width: 320px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.menu-mobile-wrapper .menu-icon-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-mobile{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    animation: showMenu .4s forwards;
+}
+@keyframes showMenu {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+  
+}
+.menu-mobile .menu-nav-list{
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+.menu-mobile .menu-nav-item{
+    font-size: 16px;
+    padding: 0;
+    width: 100%;
+}
+.menu-mobile .menu-nav-item:hover .sub-menu{
+  display: block;
+}
+.menu-mobile .menu-nav-item.active .sub-menu{
+  display: block;
+}
+.menu-mobile .menu-nav-item .sub-menu{
+  position: relative;
+  transform: translateY(0);
+  background: #F9F9F9;
+  width: 100%;
+  border-radius: 12px;
+}
+.menu-mobile .menu-nav-item .link{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.menu-mobile .menu-nav-item .link:hover{
+  transform: scale(1);
+}
+.menu-mobile .menu-nav-item .link a{
+  flex-grow: 1;
+}
+.menu-mobile .menu-nav-item.active .link,
+.menu-mobile .menu-nav-item:hover .link{
+  color: #4DAE18;
+}
+.menu-mobile .phone,
+.menu-mobile .email{
+    display: flex;
+}
+
+
+  .header{
+    height: 500px;
+    background-color: grey;
+  }
 
 /* MEDIA QUERIES */
 
@@ -205,11 +373,15 @@ img{
     .menu-icon-wrapper{
         display: flex;
     }
+
+    .menu-nav-wrapper{
+        display: none;
+      }
 }
 
 @media (max-width: 480px) {
     .top-bar__actions{
-        gap: 10px;
+        gap: 6px;
     }
     .authentication-block{
         padding: 8px;
@@ -217,6 +389,10 @@ img{
     .authentication-block span{
         display: none;
     }
+
+    .menu-mobile {
+      width: 100%;
+  }
 }
 
 @media (max-width: 360px) {
