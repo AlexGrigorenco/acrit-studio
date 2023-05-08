@@ -64,6 +64,7 @@ img{
 .green-button:disabled{
   background: #D2D2D2;
   color: #A6A6A6;
+  cursor: default;
 }
 
 
@@ -143,7 +144,7 @@ img{
 
 /*! MENU BURGER*/
 
-.menu-icon-wrapper {
+.menu-burger-wrapper {
     background-color: #4DAE18;
     border-radius: 8px;
     padding: 5px;
@@ -303,7 +304,7 @@ img{
     bottom: 0;
     overflow-y: auto;
 }
-.menu-mobile-wrapper .menu-icon-wrapper{
+.menu-mobile-wrapper .menu-burger-wrapper{
     position: absolute;
     top: 20px;
     right: 20px;
@@ -546,6 +547,23 @@ img{
     align-items: center;
     gap: 15px;
   }
+  .subscription .inputs-wrapper .error{
+    border: 1px red solid;
+    position: relative;
+    border-radius: 8px;
+  }
+  .subscription .inputs-wrapper .error span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    color: red;
+
+  }
+  .subscription .inputs-wrapper .success-submit{
+    color: #4DAE18;
+    font-weight: 600;
+  }
   .subscription .inputs-wrapper input{
     background: #F9F9F9;
     border: 1px solid #DDDDDD;
@@ -622,7 +640,7 @@ img{
     .email{
         display: none;
     }
-    .menu-icon-wrapper{
+    .menu-burger-wrapper{
         display: flex;
     }
 
