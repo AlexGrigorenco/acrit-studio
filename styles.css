@@ -132,7 +132,7 @@ img{
     padding: 8px 16px;
     cursor: pointer;
 }
-.authentication-block span{
+.authentication-block a{
     color: #8B8B8B;
 }
 
@@ -394,9 +394,12 @@ img{
     justify-content: space-between;
   }
   .header-content-block{
-    display: flex;flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     max-width: 500px;
+    z-index: 50;
   }
   .header-title{
     font-size: 48px;
