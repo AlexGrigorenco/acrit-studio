@@ -261,6 +261,7 @@ img{
     background: #fff;
     padding: 20px;
     border-radius: 0px 0px 12px 12px;
+    z-index: 100;
   }
   .menu-nav-item:hover .sub-menu{
     display: block;
