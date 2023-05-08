@@ -92,11 +92,7 @@ $(function(){
 
         const input = event.target.querySelector('input')
 
-        if (input.value.trim() === ''){
-            setErrorMessage('span', 'error-message', 'Введите ваш email', input.parentElement)
-        }else{
-            removeErrorMessage(input.parentElement)
-        }
+        input.value.trim() === '' ? setErrorMessage('span', 'error-message', 'Введите ваш email', input.parentElement) : removeErrorMessage(input.parentElement)
 
         if (!validateEmail(input.value)) {
             setErrorMessage('span', 'error-message', 'Введите пожалуйста корректный email', input.parentElement)

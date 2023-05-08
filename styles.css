@@ -610,6 +610,10 @@ img{
       right: -14%;
       bottom: -46px;
       height: 100%;
+      -webkit-position: absolute;
+      -webkit-right: -14%;
+      -webkit-bottom: -46px;
+      -webkit-height: 100%; 
     }
     .header-icon{
       flex: 24%;
@@ -654,6 +658,8 @@ img{
     .header-image-block{
       right: -150px;
       height: 300px;
+      -webkit-right: -150px;
+      -webkit-height: 300px;
     }
     .header-icon{
       height: 150px;
@@ -713,6 +719,8 @@ img{
   .header-image-block{
     right: -40px;
     height: 200px;
+    -webkit-right: -40px;
+    -webkit-height: 200px;
   }
   .header-icon{
     height: 94px;
@@ -761,4 +769,3 @@ img{
     bottom: 0;
   }
 }
-
