@@ -695,7 +695,7 @@ img{
     .authentication-block{
         padding: 8px;
     }
-    .authentication-block span{
+    .authentication-links{
         display: none;
     }
 
