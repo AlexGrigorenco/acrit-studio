@@ -19,6 +19,7 @@ body{
     font-size: 16px;
     background: #fff;
     color: #232323;
+    font-feature-settings: 'pnum' on, 'lnum' on;
     /* font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif; */
 }
@@ -762,6 +763,9 @@ img{
   .header-wrapper{
     flex-direction: column;
     padding-bottom: 0;
+  }
+  .header-content-block button{
+    width: 100%;
   }
   .header-image-block{
     position: relative;

@@ -124,3 +124,8 @@ $(function(){
       });
       
 })
+
+
+//! BRAEDCRUMB
+
+$('.breadcrumb__item').each((index, item) => (index === $('.breadcrumb__item').length - 1) ? $(item).addClass('last') : null)
