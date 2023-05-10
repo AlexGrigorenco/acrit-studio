@@ -30,6 +30,7 @@ button{
     color: inherit;
     border: none;
     cursor: pointer;
+    background: transparent;
 }
 
 img{
@@ -37,6 +38,10 @@ img{
     height: 100%;
     object-fit: contain;
 }
+input:focus {
+  outline: none;
+}
+
 
 .container{
     max-width: 1330px;
@@ -71,6 +76,9 @@ img{
 
 /*! TOP-BAR */
 
+.top-bar-wrapper{
+  position: relative;
+}
 .top-bar{
     padding: 20px 0;
 
@@ -80,12 +88,17 @@ img{
     justify-content: space-between;
 }
 
-.logo__wrapper{
-    max-width: 190px;
+.logo-wrapper{
+    margin-right: 10vw;
+}
+.logo{
+  max-width: 190px;
 }
 
 .phone,
 .email{
+    flex-grow: 1;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -104,13 +117,72 @@ img{
     font-size: 14px;
     opacity: .6;
 }
+.phone.hidden,
+.email.hidden{
+    display: none;
+}
+.top-bar-search-wrapper {
+  display: none;
+  flex-grow: 1;
+}
+.top-bar-search-wrapper.show {
+  display: block;
+  background: #fff;
+}
+#search-form{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#search-form .error{
+  position: relative;
+  border: 1px solid red;
+  border-radius: 8px;
+}
+#search-form .error::before{
+  content: 'Введите Ваш поисковый запрос!';
+  position: absolute;
+  color: red;
+  font-size: 12px;
+  left: 8px;
+  top: 0;
+  transform: translateY(-120%);
+}
+#search-form input{
+  padding: 14px 14px 14px 48px;
+  border: none;
+  background: #F4F4F4;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 18px;
+}
+#search-form input::placeholder{
+  color: #8B8B8B;
+  font-size: 16px;
+}
+#search-form::before{
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 16px;
+  z-index: 100;
+  transform: translateY(-50%);
 
+  background-image: url(./images/top-bar/search-icon.svg);
+}
 .top-bar__actions{
+    justify-content: flex-end;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     gap: 8px;
 }
-
+.search.hidden{
+  display: none;
+}
 .search,
 .cart{
     border-radius: 8px;
@@ -597,10 +669,16 @@ img{
 
 @media (max-width: 1000px) {
     .top-bar{
-        gap: 6px;
+        gap: 10px;
     }
-    .logo__wrapper{
-        max-width: 110px;
+    .logo-wrapper{
+      margin-right: 4vw;
+    }
+    .logo-wrapper.remove-margin{
+      margin-right: 0;
+    }
+    .logo{
+      max-width: 110px;
     }
     .top-bar__actions{
         gap: 4px;
@@ -644,6 +722,22 @@ img{
     .phone,
     .email{
         display: none;
+    }
+    .top-bar-search-wrapper{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 20px;
+      z-index: 100;
+      border-top: 1px solid #ECECEC;
+      border-bottom: 1px solid #ECECEC;
+    }
+    .top-bar-search-wrapper.show{
+      animation: showSearch .2s forwards;
+    }
+    .search.hidden{
+      display: block;
     }
     .menu-burger-wrapper{
         display: flex;
@@ -772,5 +866,14 @@ img{
     height: auto;
     width: auto;
     transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes showSearch {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(100%);
   }
 }

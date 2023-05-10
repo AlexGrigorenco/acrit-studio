@@ -17,8 +17,8 @@
     <div class="top-bar-wrapper">
         <div class="container">
             <div class="top-bar">
-                <div class="logo">
-                    <div class="logo__wrapper">
+                <div class="logo-wrapper">
+                    <div class="logo">
                         <a href="#">
                             <img src="./images/top-bar/logo.png" alt="logo">
                         </a>
@@ -32,12 +32,25 @@
                     <a href="mailto:design@acrit.ru">design@acrit.ru</a>
                     <span>Напишите нам</span>
                 </div>
+                
                 <div class="top-bar__actions">
+                    <div class="top-bar-search-wrapper">
+                        
+                            <div style="flex-grow: 1;">
+                                <input name="search" value="" type="text" placeholder="Введите запрос">
+                            </div>
+                            <div>
+                                <button class="green-button">
+                                    Искать
+                                </button>
+                            </div>
+                        
+                    </div>
                     <div class="search">
                         <div class="icon-wrapper">
-                            <a href="#">
+                            <button id="show-search">
                                 <img src="./images/top-bar/search-icon.svg" alt="search">
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div class="cart">

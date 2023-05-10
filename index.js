@@ -28,12 +28,12 @@ $(function(){
 		return data;
 	};
 
-    const $formBlock = $('.subscription-wrapper');
-	$formBlock.html('<form id="subscription-form" class="subscription" role="form">' + $formBlock.html() + '</form>');
+    const $formSubscriptionBlock = $('.subscription-wrapper');
+	$formSubscriptionBlock.html('<form id="subscription-form" class="subscription" role="form">' + $formSubscriptionBlock.html() + '</form>');
 
-    const form = document.querySelector('#subscription-form')
+    const formSubscribtion = document.querySelector('#subscription-form')
 
-    function sendAjaxPost(form) {
+    function sendAjaxFormSubscription(form) {
 		const $form = $(form),
 			_btn = $(".button-wrapper button", $form),
 			data = $form.serializeJSON();
@@ -87,7 +87,7 @@ $(function(){
     }
 
 
-    form.onsubmit = (event) => {
+    formSubscribtion.onsubmit = (event) => {
 		event.preventDefault()
 
         const input = event.target.querySelector('input')
@@ -98,7 +98,7 @@ $(function(){
             setErrorMessage('span', 'error-message', 'Введите пожалуйста корректный email', input.parentElement)
         }else{
             removeErrorMessage(input.parentElement)
-            sendAjaxPost(form)
+            sendAjaxFormSubscription(formSubscribtion)
         }
     }
 
@@ -121,11 +121,74 @@ $(function(){
 
     $('.menu-burger-wrapper').click(function() {
         toggleMenuMobile()
-      });
+    });
       
-})
+
 
 
 //! BRAEDCRUMB
 
 $('.breadcrumb__item').each((index, item) => (index === $('.breadcrumb__item').length - 1) ? $(item).addClass('last') : null)
+
+
+
+//! SEARCH FORM */
+
+
+const $formSearchBlock = $('.top-bar-search-wrapper');
+$formSearchBlock.html('<form id="search-form" role="form">' + $formSearchBlock.html() + '</form>');
+
+const formSearch = document.querySelector('#search-form')
+
+function toggleSearch(){
+	$('.top-bar .logo-wrapper').toggleClass('remove-margin')
+	$('.search').toggleClass('hidden')
+	$('.top-bar .phone').toggleClass('hidden');
+	$('.top-bar .email').toggleClass('hidden');
+	$('.top-bar-search-wrapper').toggleClass('show');
+}
+function sendAjaxFormSearch(form) {
+	const $form = $(form),
+		_btn = $(".button-wrapper button", $form),
+		data = $form.serializeJSON();
+
+	if (_btn.hasClass('btn-frm-sended')) {
+		return;
+	}
+
+	_btn.addClass('btn-frm-sended');
+
+	$.ajax({
+		url: "#",
+		method: "POST",
+		data: data
+	}).always(function (dataResult) {
+		_btn.removeClass('btn-frm-sended');
+		toggleSearch()
+	});
+}
+
+$('#show-search').click(function(){
+	toggleSearch()
+})
+
+formSearch.onsubmit = (event) => {
+	event.preventDefault()
+
+	const input = event.target.querySelector('input')
+
+	if (input.value.trim() === '') {
+		console.log('dsfdh')
+		input.parentElement.classList.add('error')
+	}else{
+		input.parentElement.classList.remove('error')
+		input.value = ''
+		sendAjaxFormSearch(formSearch)
+	}
+}
+
+
+
+})
+
+

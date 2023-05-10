@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Articles Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
     <div class="top-bar-wrapper">
         <div class="container">
             <div class="top-bar">
-                <div class="logo">
-                    <div class="logo__wrapper">
+                <div class="logo-wrapper">
+                    <div class="logo">
                         <a href="./index.html">
                             <img src="./images/top-bar/logo.png" alt="logo">
                         </a>
@@ -33,11 +33,23 @@
                     <span>Напишите нам</span>
                 </div>
                 <div class="top-bar__actions">
+                    <div class="top-bar-search-wrapper">
+                        
+                        <div style="flex-grow: 1;">
+                            <input name="search" value="" type="text" placeholder="Введите запрос">
+                        </div>
+                        <div>
+                            <button class="green-button">
+                                Искать
+                            </button>
+                        </div>
+                    
+                </div>
                     <div class="search">
                         <div class="icon-wrapper">
-                            <a href="#">
+                            <button id="show-search">
                                 <img src="./images/top-bar/search-icon.svg" alt="search">
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div class="cart">
