@@ -191,8 +191,13 @@ function toggleFilter(){
 }
 $('.filter-list-wrapper').click((e) => e.stopPropagation())  
 
-$('.filter-button-container button, .filter-overlay .filter-close, .filter-overlay, .filter-item a').click(toggleFilter);
+$('.filter-button-container button, .filter-overlay .filter-close, .filter-overlay').click(toggleFilter);
 
+$('.filter-item a').click((e) => $(e.target).closest('.filter-overlay').hasClass('active') && toggleFilter())
+
+//!
 })
+
+
 
 
