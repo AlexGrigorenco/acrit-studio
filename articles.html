@@ -417,12 +417,23 @@
                 <div class="articles-container">
                     <div class="articles-container__filter">
                         <div class="filter-button-container">
-                            <div>
-                                <button class="green-button">Фильтр</button>
-                            </div>
+                                <button class="green-light-button">
+                                    <span>
+                                        Фильтр
+                                    </span>
+                                    <svg class="svg-icon">
+                                        <use xlink:href="./images/articles/sprite.svg#icon-filter"></use>
+                                      </svg>
+                                </button>
                         </div>
-                        <div class="filter-overlay">
+                        <div class="filter-overlay ">
                             <div class="filter-list-wrapper">
+                                <button class="filter-close">
+                                    <img src="./images/articles/icon-close.svg" alt="close">
+                                </button>
+                                <div class="filter-name">
+                                    Фильтры
+                                </div>
                                 <div class="filter-title">
                                     <span>Техподдержка советует</span>
                                     <span class="count">22</span>

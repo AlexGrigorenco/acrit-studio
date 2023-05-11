@@ -61,13 +61,25 @@ input:focus {
   border-radius: 8px;
   transition: .2s linear;
 }
-.green-button:hover{
-  background: #4DAE18;
+.green-light-button{
+  font-size: 16px;
+  background: #E2F1D1;
+  color: #70BB18;
+  padding: 16px 24px;
+  border-radius: 8px;
+  transition: .2s linear;
 }
-.green-button:active{
+.green-button:hover,
+.green-light-button:hover{
+  background: #4DAE18;
+  color: #fff;
+}
+.green-button:active,
+.green-light-button:active{
   opacity: .7;
 }
-.green-button:disabled{
+.green-button:disabled,
+.green-light-button:disabled{
   background: #D2D2D2;
   color: #A6A6A6;
   cursor: default;

@@ -28,6 +28,8 @@ $(function(){
 		return data;
 	};
 
+	//! SUBSCRIPTION
+
     const $formSubscriptionBlock = $('.subscription-wrapper');
 	$formSubscriptionBlock.html('<form id="subscription-form" class="subscription" role="form">' + $formSubscriptionBlock.html() + '</form>');
 
@@ -102,35 +104,6 @@ $(function(){
         }
     }
 
-    //! MENU MOBILE
-
-    $('.menu-nav-item .link a').click(function(e){
-        $('.menu-nav-item').removeClass('active');
-        $(e.target).closest('.menu-nav-item').addClass('active');        
-    })
-    
-    $('.menu-mobile .menu-nav-item .sub-menu a').click(function(e){
-        toggleMenuMobile()     
-    })
-
-    function toggleMenuMobile(){
-        $('.menu-icon').toggleClass('menu-icon-active');
-        $('.menu-mobile-overlay').toggleClass('active');
-        $('body').toggleClass('noscroll');
-    }
-
-    $('.menu-burger-wrapper').click(function() {
-        toggleMenuMobile()
-    });
-      
-
-
-
-//! BRAEDCRUMB
-
-$('.breadcrumb__item').each((index, item) => (index === $('.breadcrumb__item').length - 1) ? $(item).addClass('last') : null)
-
-
 
 //! SEARCH FORM */
 
@@ -187,7 +160,38 @@ formSearch.onsubmit = (event) => {
 	}
 }
 
+    //! MENU MOBILE
 
+    $('.menu-nav-item .link a').click(function(e){
+        $('.menu-nav-item').removeClass('active');
+        $(e.target).closest('.menu-nav-item').addClass('active');        
+    })
+
+	function toggleMenuMobile(){
+        $('.menu-icon').toggleClass('menu-icon-active');
+        $('.menu-mobile-overlay').toggleClass('active');
+        $('body').toggleClass('noscroll');
+    }
+
+	$('.menu-mobile-wrapper').click((e) => e.stopPropagation()) 
+    
+    $('.menu-mobile .menu-nav-item .sub-menu a, .menu-burger-wrapper, .menu-mobile-overlay').click(toggleMenuMobile);
+
+
+//! BRAEDCRUMB
+
+$('.breadcrumb__item').each((index, item) => (index === $('.breadcrumb__item').length - 1) ? $(item).addClass('last') : null)
+
+
+//! ARTICLES FILTER
+
+function toggleFilter(){
+	$('.filter-overlay').toggleClass('active');
+	$('body').toggleClass('noscroll');
+}
+$('.filter-list-wrapper').click((e) => e.stopPropagation())  
+
+$('.filter-button-container button, .filter-overlay .filter-close, .filter-overlay, .filter-item a').click(toggleFilter);
 
 })
 
