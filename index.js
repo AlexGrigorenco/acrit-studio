@@ -182,6 +182,8 @@ formSearch.onsubmit = (event) => {
 
 $('.breadcrumb__item').each((index, item) => (index === $('.breadcrumb__item').length - 1) ? $(item).addClass('last') : null)
 
+$('.breadcrumb__list').scrollLeft($('.breadcrumb__list').get(0).scrollWidth - $('.breadcrumb__list').get(0).clientWidth);
+
 
 //! ARTICLES FILTER
 
