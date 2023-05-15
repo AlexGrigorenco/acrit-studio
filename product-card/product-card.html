@@ -421,60 +421,807 @@
     <section class="product-block">
         <div class="container">
             <div class="product-wrapper">
-                <div class="product-filter-overlay">
-                    <div class="product-filter">
-                        <div class="product-filter__item">
-                            <a href="#">Готовые интернет-магазины</a>
-                            <div class="product-filter-counter">
-                                169
+                <div class="product-filter-container">
+                    <div class="filter-button-container">
+                        <button class="green-light-button">
+                            <span>
+                                Фильтр
+                            </span>
+                            <svg style="width: 16px; height: 16px;" class="svg-icon">
+                                <use xlink:href="../images/articles/sprite.svg#icon-filter"></use>
+                              </svg>
+                        </button>
+                </div>
+                    <div class="product-filter-overlay">
+                        <div class="product-filter">
+                            <button class="filter-close">
+                                <img src="../images/product/icon-close.svg" alt="close">
+                            </button>
+                            <div class="product-filter__title">
+                                Категории
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Готовые сайты</a>
-                            <div class="product-filter-counter">
-                                463
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Готовые интернет-магазины</a>
+                                    <div class="product-filter-counter">
+                                        169
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Для интернет-магазина</a>
-                            <div class="product-filter-counter">
-                                242
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Готовые сайты</a>
+                                    <div class="product-filter-counter">
+                                        463
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Инструменты</a>
-                            <div class="product-filter-counter">
-                                289
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Для интернет-магазина</a>
+                                    <div class="product-filter-counter">
+                                        242
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Интеграция</a>
-                            <div class="product-filter-counter">
-                                89
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Инструменты</a>
+                                    <div class="product-filter-counter">
+                                        289
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Маркетинг, реклама</a>
-                            <div class="product-filter-counter">
-                                145
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Интеграция</a>
+                                    <div class="product-filter-counter">
+                                        89
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Мобильные приложения</a>
-                            <div class="product-filter-counter">
-                                4
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Маркетинг, реклама</a>
+                                    <div class="product-filter-counter">
+                                        145
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Поддержка клиентов</a>
-                            <div class="product-filter-counter">
-                                69
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Мобильные приложения</a>
+                                    <div class="product-filter-counter">
+                                        4
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-filter__item">
-                            <a href="#">Решения для Битрикс24</a>
-                            <div class="product-filter-counter">
-                                194
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Поддержка клиентов</a>
+                                    <div class="product-filter-counter">
+                                        69
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-filter__item">
+                                <div class="product-filter__item__link">
+                                    <a href="#">Решения для Битрикс24</a>
+                                <div class="product-filter-counter">
+                                    194
+                                </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    <div class="product-sub-filter">
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">B2B</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Авто</a>
+                                            <div class="product-sub-filter-counter">
+                                                11
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Бытовая техника и электроника</a>
+                                            <div class="product-sub-filter-counter">
+                                                25
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Детские товары</a>
+                                            <div class="product-sub-filter-counter">
+                                                9
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Другое</a>
+                                            <div class="product-sub-filter-counter">
+                                                14
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Красота и здоровье</a>
+                                            <div class="product-sub-filter-counter">
+                                                4
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мебель</a>
+                                            <div class="product-sub-filter-counter">
+                                                7
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Мобильные приложения </a>
+                                            <div class="product-sub-filter-counter">
+                                                0
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Одежда</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Подарки и сувениры</a>
+                                            <div class="product-sub-filter-counter">
+                                                8
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Продукты питания</a>
+                                            <div class="product-sub-filter-counter">
+                                                17
+                                            </div>
+                                        </div>
+                                        <div class="product-sub-filter__item">
+                                            <a href="#">Ремонт</a>
+                                            <div class="product-sub-filter-counter">
+                                                12
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

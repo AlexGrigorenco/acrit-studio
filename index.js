@@ -187,15 +187,30 @@ $('.breadcrumb').length && $('.breadcrumb__list').scrollLeft($('.breadcrumb__lis
 
 //! ARTICLES FILTER
 
-function toggleFilter(){
-	$('.filter-overlay').toggleClass('active');
+function toggleArticlesFilter(){
+	$('.articles .filter-overlay').toggleClass('active');
 	$('body').toggleClass('noscroll');
 }
 $('.filter-list-wrapper').click((e) => e.stopPropagation())  
 
-$('.filter-button-container button, .filter-overlay .filter-close, .filter-overlay').click(toggleFilter);
+$('.articles .filter-button-container button, .articles .filter-overlay .filter-close, .articles .filter-overlay').click(toggleArticlesFilter);
 
-$('.filter-item a').click((e) => $(e.target).closest('.filter-overlay').hasClass('active') && toggleFilter())
+$('.articles .filter-item a').click((e) => $(e.target).closest('.filter-overlay').hasClass('active') && toggleArticlesFilter())
+
+
+
+//! PRODUCT FILTER
+
+function toggleProductFilter(){
+	$('.product-filter-overlay').toggleClass('active');
+	$('body').toggleClass('noscroll');
+}
+
+$('.product-filter').click((e) => e.stopPropagation())
+
+$('.product-wrapper .filter-button-container button, .product-filter .filter-close, .product-filter-overlay').click(toggleProductFilter);
+
+$('.product-sub-filter a').click((e) => $(e.target).closest('.product-filter-overlay').hasClass('active') && toggleProductFilter())
 
 //!
 })

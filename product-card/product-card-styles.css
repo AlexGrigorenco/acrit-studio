@@ -7,7 +7,11 @@
     display: flex;
     gap: 30px;
 }
-.product-filter {
+
+/*! FILTER */
+
+.product-filter,
+.product-sub-filter {
     min-width: 300px;
     background: #F9F9F9;
     border-radius: 12px;
@@ -17,23 +21,134 @@
     flex-direction: column;
     gap: 14px;
 }
-.product-filter__item {
+.product-filter__item{
+    position: relative;
+}
+.product-filter__title{
+    display: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 60px 0 20px 0;
+}
+.product-filter__item__link,
+.product-sub-filter__item {
     position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 14px;
 }
-.product-filter__item a:hover{
+.product-filter__item:hover .product-filter__item__link,
+.product-filter__item:hover .product-filter-counter,
+.product-sub-filter__item:hover>a,
+.product-sub-filter__item:hover .product-sub-filter-counter{
     color: #70BB18;
     transition: .2s linear;
 }
-.product-filter-counter {
+.product-filter-counter,
+.product-sub-filter-counter {
     background: #FFFFFF;
     border-radius: 100px;
     padding: 4px 8px;
     color: #8B8B8B;
 }
+.product-filter__item__arrow{
+    display: none;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    transition: .2s linear;
+}
+.product-filter__item:hover .product-filter__item__arrow{
+    transform: rotate(180deg);
+}
+.product-sub-filter-wrapper{
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    transform: translateX(100%);
+    padding: 0 30px;
+    z-index: 10;
+}
+.product-sub-filter{
+    position: relative;
+    border: 1px solid #C9C9C9;
+}
+.product-sub-filter::after{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #C9C9C9;
+    transform: rotate(45deg);
+    top: 24px;
+    left: -6px;
+    z-index: -1;
+}
+.product-filter__item:hover .product-sub-filter-wrapper{
+    display: block;
+}
+.filter-button-container {
+    display: none;
+}
+.filter-button-container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.product-filter-overlay.active{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.product-filter-overlay.active .product-filter{
+    min-width: 360px;
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0;
+    border-radius: 0;
+    background: #fff;
+    animation: showProductFilter .3s linear forwards;
+}
+.product-filter-overlay.active .product-filter-counter {
+    background: #F9F9F9;
+    color: #8B8B8B;
+}
+
+.filter-close{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 42px;
+    height: 42px;
+    background: #F9F9F9;
+    border-radius: 10px;
+    padding: 9px;
+}
+
+@keyframes showProductFilter {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*! PRODUCT */
+
 .product {
     flex-grow: 1;
 }
@@ -78,6 +193,7 @@
     display: flex;
     align-items: stretch;
     gap: 16px;
+    flex-wrap: wrap;
 }
 .product__header .buttons-wrapper button {
     height: 100%;
@@ -89,4 +205,69 @@
 .green-light-button {
 }
 .without-bg-button {
+}
+
+
+/*! MEDIA QUERIES */
+
+
+@media (max-width: 1000px) {
+    .product-wrapper {
+        flex-direction: column;
+    }
+    .product-filter-overlay{
+        display: none;
+    }
+    .product-filter{
+        overflow-y: auto;
+    }
+    .product-filter__title{
+        display: block;
+    }
+    .product-filter__item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .product-filter__item__arrow{
+        display: block;
+    }
+    .product-sub-filter-wrapper{
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translateX(0);
+        padding: 0;
+        width: 100%;
+    }
+    .product-sub-filter{
+        border: none;
+    }
+    .product-sub-filter::after{
+        display: none;
+    }
+    .filter-button-container {
+        display: block;
+    }
+    .filter-close{
+        display: block;
+    }
+}
+
+
+@media (max-width: 768px) {
+   
+}
+
+
+
+@media (max-width: 480px) {
+    .product-filter-overlay.active .product-filter{
+        right: 0;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    
 }
