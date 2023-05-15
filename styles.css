@@ -58,6 +58,7 @@ input:focus {
   background: #70BB18;
   color: #fff;
   padding: 16px 24px;
+  font-weight: 600;
   border-radius: 8px;
   transition: .2s linear;
 }
@@ -65,23 +66,52 @@ input:focus {
   font-size: 16px;
   background: #E2F1D1;
   color: #70BB18;
+  font-weight: 600;
   padding: 16px 24px;
   border-radius: 8px;
   transition: .2s linear;
 }
+.without-bg-button{
+  background: transparent;
+  color: #70BB18;
+  font-size: 16px;
+  border: 1px solid #70BB18;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-weight: 600;
+  transition: .2s linear;
+}
 .green-button:hover,
-.green-light-button:hover{
+.green-light-button:hover,
+.without-bg-button:hover{
   background: #4DAE18;
   color: #fff;
 }
+.green-button svg,
+.green-button:hover svg{
+  stroke: #fff;
+  fill: #fff;
+}
+.green-light-button svg{
+  stroke: #4DAE18;
+}
+.green-light-button:hover svg{
+  stroke: #fff;
+}
 .green-button:active,
-.green-light-button:active{
+.green-light-button:active,
+.without-bg-button:active{
   opacity: .7;
 }
 .green-button:disabled,
 .green-light-button:disabled{
   background: #D2D2D2;
   color: #A6A6A6;
+  cursor: default;
+}
+.without-bg-button:disabled{
+  border: 1px solid #D7D7D7;
+  color: #D7D7D7;
   cursor: default;
 }
 
@@ -360,6 +390,60 @@ input:focus {
   .menu-nav-item .sub-menu-item:hover{
     transform: scale(1.03);
   }
+
+
+  /*! BREADCRUMB */
+
+
+
+.breadcrumb {
+  padding: 30px 0;
+  color: #8B8B8B;
+  overflow-x: hidden;
+}
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.breadcrumb__list::-webkit-scrollbar {
+  width: 6px;
+}  
+.breadcrumb__list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}  
+.breadcrumb__list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #232323;
+}
+.breadcrumb__item.last  {
+  color: #8B8B8B;
+}
+.breadcrumb__item.last  svg{
+  display: none;
+  color: #8B8B8B;
+}
+.breadcrumb__item:hover {
+  color: #4DAE22;
+}
+.breadcrumb__item svg{
+  stroke: #232323;
+  height: 16px;
+  width: 16px;
+}
+.breadcrumb__item:hover svg{
+  stroke: #4DAE22;
+}
 
 
   /*! MENU MOBILE */

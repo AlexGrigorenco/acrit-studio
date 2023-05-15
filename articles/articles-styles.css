@@ -1,50 +1,5 @@
 
 
-
-.breadcrumb {
-    padding: 30px 0;
-    color: #8B8B8B;
-    overflow-x: hidden;
-}
-.breadcrumb__list {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
-}
-.breadcrumb__list::-webkit-scrollbar {
-    width: 6px;
-}  
-  .breadcrumb__list::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}  
-  .breadcrumb__list::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-.breadcrumb__item {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-.breadcrumb__item.last  svg{
-    display: none;
-}
-.breadcrumb__item:hover {
-    color: #4DAE22;
-}
-.breadcrumb__item svg{
-    stroke: #8B8B8B;
-    height: 16px;
-    width: 16px;
-}
-.breadcrumb__item:hover svg{
-    stroke: #4DAE22;
-}
-
 .articles-title{
     max-width: 740px;
     font-weight: 700;
@@ -106,21 +61,12 @@
 .filter-button-container {
     display: none;
 }
-.filter-button-container svg{
-    width: 16px;
-    height: 16px;
-    stroke: #4DAE22;
-}
 .filter-button-container button{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 100%;
-}
-.filter-button-container button:hover svg{
-    stroke: #fff;
-    
 }
 
 .filter-list-wrapper {
@@ -290,9 +236,4 @@
     .filter-overlay.active .filter-list-wrapper{
         right: 0;
     }
-}
-
-
-
-@media (max-width: 360px) {
 }

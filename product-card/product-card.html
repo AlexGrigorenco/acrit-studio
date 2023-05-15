@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles Page</title>
+    <title>Product Card</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/png" href="./images/top-bar/favicon.png">
-    <link rel="stylesheet" href="./articles-styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../images/top-bar/favicon.png">
+    <link rel="stylesheet" href="./product-card-styles.css">
 </head>
 <body>
 
@@ -19,8 +19,8 @@
             <div class="top-bar">
                 <div class="logo-wrapper">
                     <div class="logo">
-                        <a href="./index.html">
-                            <img src="./images/top-bar/logo.png" alt="logo">
+                        <a href="../index.html">
+                            <img src="../images/top-bar/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -32,37 +32,38 @@
                     <a href="mailto:design@acrit.ru">design@acrit.ru</a>
                     <span>Напишите нам</span>
                 </div>
+                
                 <div class="top-bar__actions">
                     <div class="top-bar-search-wrapper">
                         
-                        <div style="flex-grow: 1;">
-                            <input name="search" value="" type="text" placeholder="Введите запрос">
-                        </div>
-                        <div>
-                            <button class="green-button">
-                                Искать
-                            </button>
-                        </div>
-                    
-                </div>
+                            <div style="flex-grow: 1;">
+                                <input name="search" value="" type="text" placeholder="Введите запрос">
+                            </div>
+                            <div>
+                                <button class="green-button">
+                                    Искать
+                                </button>
+                            </div>
+                        
+                    </div>
                     <div class="search">
                         <div class="icon-wrapper">
                             <button id="show-search">
-                                <img src="./images/top-bar/search-icon.svg" alt="search">
+                                <img src="../images/top-bar/search-icon.svg" alt="search">
                             </button>
                         </div>
                     </div>
                     <div class="cart">
                         <div class="icon-wrapper">
                             <a href="#">
-                                <img src="./images/top-bar/cart-icon.svg" alt="cart">
+                                <img src="../images/top-bar/cart-icon.svg" alt="cart">
                             </a>
                         </div>
                     </div>
                     <div class="authentication-block">
                         <div class="icon-wrapper">
                             <a href="#">
-                                <img src="./images/top-bar/user-icon.svg" alt="user">
+                                <img src="../images/top-bar/user-icon.svg" alt="user">
                             </a>
                         </div>
                         <div class="authentication-links">
@@ -83,8 +84,8 @@
             <div class="menu-nav-list">
                 <div class="menu-nav-item active">
                     <div class="link">
-                        <a href="#">Каталог</a>
-                        <img class="arrow-icon" src="./images/menu-nav/arrow-down.svg" alt="arrow">
+                        <a href="../articles/articles.html">Каталог</a>
+                        <img class="arrow-icon" src="../images/menu-nav/arrow-down.svg" alt="arrow">
                     </div>
                     
                     <div class="underline"></div>
@@ -111,7 +112,7 @@
                 <div class="menu-nav-item">
                     <div class="link">
                         <a href="#">Услуги</a>
-                        <img class="arrow-icon" src="./images/menu-nav/arrow-down.svg" alt="arrow">
+                        <img class="arrow-icon" src="../images/menu-nav/arrow-down.svg" alt="arrow">
                     </div>
                     
                     <div class="underline"></div>
@@ -138,7 +139,7 @@
                 <div class="menu-nav-item">
                     <div class="link">
                         <a href="#">Помощь</a>
-                        <img class="arrow-icon" src="./images/menu-nav/arrow-down.svg" alt="arrow">
+                        <img class="arrow-icon" src="../images/menu-nav/arrow-down.svg" alt="arrow">
                     </div>                    
                     <div class="underline"></div>
                     <div class="sub-menu">
@@ -164,7 +165,7 @@
                 <div class="menu-nav-item">
                     <div class="link">
                         <a href="#">Клиентам</a>
-                        <img class="arrow-icon" src="./images/menu-nav/arrow-down.svg" alt="arrow">
+                        <img class="arrow-icon" src="../images/menu-nav/arrow-down.svg" alt="arrow">
                     </div>                    
                     <div class="underline"></div>
                     <div class="sub-menu">
@@ -190,7 +191,7 @@
                 <div class="menu-nav-item">
                     <div class="link">
                         <a href="#">База знаний</a>
-                        <img class="arrow-icon" src="./images/menu-nav/arrow-down.svg" alt="arrow">
+                        <img class="arrow-icon" src="../images/menu-nav/arrow-down.svg" alt="arrow">
                     </div>                    
                     <div class="underline"></div>
                     <div class="sub-menu">
@@ -231,7 +232,7 @@
                 <div class="logo">
                     <div class="logo__wrapper">
                         <a href="#">
-                            <img src="./images/top-bar/logo.png" alt="logo">
+                            <img src="../images/top-bar/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -239,8 +240,8 @@
                 <div class="menu-nav-list">
                     <div class="menu-nav-item active">
                         <div class="link">
-                            <a href="#">Каталог</a>
-                            <img class="arrow-icon" src="./images/menu-mobile/arrow-down.svg" alt="arrow">
+                            <a href="./articles/articles.html">Каталог</a>
+                            <img class="arrow-icon" src="../images/menu-mobile/arrow-down.svg" alt="arrow">
                         </div>
                         <div class="sub-menu">
                             <div class="sub-menu-list">
@@ -265,7 +266,7 @@
                     <div class="menu-nav-item">
                         <div class="link">
                             <a href="#">Услуги</a>
-                            <img class="arrow-icon" src="./images/menu-mobile/arrow-down.svg" alt="arrow">
+                            <img class="arrow-icon" src="../images/menu-mobile/arrow-down.svg" alt="arrow">
                         </div>
                         <div class="sub-menu">
                             <div class="sub-menu-list">
@@ -290,7 +291,7 @@
                     <div class="menu-nav-item">
                         <div class="link">
                             <a href="#">Помощь</a>
-                            <img class="arrow-icon" src="./images/menu-mobile/arrow-down.svg" alt="arrow">
+                            <img class="arrow-icon" src="../images/menu-mobile/arrow-down.svg" alt="arrow">
                         </div>
                         <div class="sub-menu">
                             <div class="sub-menu-list">
@@ -315,7 +316,7 @@
                     <div class="menu-nav-item">
                         <div class="link">
                             <a href="#">Клиентам</a>
-                            <img class="arrow-icon" src="./images/menu-mobile/arrow-down.svg" alt="arrow">
+                            <img class="arrow-icon" src="../images/menu-mobile/arrow-down.svg" alt="arrow">
                         </div>
                         <div class="sub-menu">
                             <div class="sub-menu-list">
@@ -340,7 +341,7 @@
                     <div class="menu-nav-item">
                         <div class="link">
                             <a href="#">База знаний</a>
-                            <img class="arrow-icon" src="./images/menu-mobile/arrow-down.svg" alt="arrow">
+                            <img class="arrow-icon" src="../images/menu-mobile/arrow-down.svg" alt="arrow">
                         </div>
                         <div class="sub-menu">
                             <div class="sub-menu-list">
@@ -390,334 +391,141 @@
         <div class="container">
             <div class="breadcrumb__list">
                 <div class="breadcrumb__item">
-                    <a href="#">Главная</a>
+                    <a href="#">Маркетплейс</a>
                     <svg class="svg-icon">
-                        <use xlink:href="./images/articles/sprite.svg#icon-arrow-right"></use>
+                        <use xlink:href="../images/articles/sprite.svg#icon-arrow-right"></use>
                       </svg>
                 </div>
                 <div class="breadcrumb__item">
-                    <a href="#">Интернет хранилище самых лучших сервисов и инструментов для SEO, SMM и SMO</a>
+                    <a href="#">Для интернет-магазина</a>
                     <svg class="svg-icon">
-                        <use xlink:href="./images/articles/sprite.svg#icon-arrow-right"></use>
+                        <use xlink:href="../images/articles/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                </div>
+                <div class="breadcrumb__item">
+                    <a href="#">Система бонусов. Программы лояльности</a>
+                    <svg class="svg-icon">
+                        <use xlink:href="../images/articles/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                </div>
+                <div class="breadcrumb__item">
+                    <a href="#">1С-Битрикс</a>
+                    <svg class="svg-icon">
+                        <use xlink:href="../images/articles/sprite.svg#icon-arrow-right"></use>
                       </svg>
                 </div>
             </div>
         </div>
     </div>
 
-    <main>
-        <section class="articles">
-            <div class="container">
-                <h2 class="articles-title">
-                    Интернет хранилище самых лучших сервисов и инструментов для SEO, SMM и SMO
-                </h2>
-                <h3 class="articles-subtitle">
-                    Коллекция полезных материалов из мира веб-разработки, интернет-маркетинга, SEO и SMM
-                </h3>
-                <div class="articles-container">
-                    <div class="articles-container__filter">
-                        <div class="filter-button-container">
-                                <button class="green-light-button">
-                                    <span>
-                                        Фильтр
-                                    </span>
-                                    <svg class="svg-icon">
-                                        <use xlink:href="./images/articles/sprite.svg#icon-filter"></use>
-                                      </svg>
-                                </button>
+    <section class="product-block">
+        <div class="container">
+            <div class="product-wrapper">
+                <div class="product-filter-overlay">
+                    <div class="product-filter">
+                        <div class="product-filter__item">
+                            <a href="#">Готовые интернет-магазины</a>
+                            <div class="product-filter-counter">
+                                169
+                            </div>
                         </div>
-                        <div class="filter-overlay ">
-                            <div class="filter-list-wrapper">
-                                <button class="filter-close">
-                                    <img src="./images/articles/icon-close.svg" alt="close">
-                                </button>
-                                <div class="filter-name">
-                                    Фильтры
-                                </div>
-                                <div class="filter-title">
-                                    <span>Техподдержка советует</span>
-                                    <span class="count">22</span>
-                                </div>
-                                <div class="filter-list">
-                                    <div class="filter-item">
-                                        <a href="#">A/B Тесты</a>
-                                        <span class="count">6</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">App Store</a>
-                                        <span class="count">4</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">Email</a>
-                                        <span class="count">32</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">EmMobile-friendlyail</a>
-                                        <span class="count">10</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">SEO Инструменты</a>
-                                        <span class="count">19</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">SEO-агрегаторы</a>
-                                        <span class="count">7</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">SMM</a>
-                                        <span class="count">32</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">Главное в сайте это его содержание </a>
-                                        <span class="count">32</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">Для новичков</a>
-                                        <span class="count">41</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">Инструменты</a>
-                                        <span class="count">42</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">Как заказать сайт</a>
-                                        <span class="count">1</span>
-                                    </div>
-                                    <div class="filter-item">
-                                        <a href="#">Картинки</a>
-                                        <span class="count">26</span>
-                                    </div>
-                                </div>
+                        <div class="product-filter__item">
+                            <a href="#">Готовые сайты</a>
+                            <div class="product-filter-counter">
+                                463
+                            </div>
+                        </div>
+                        <div class="product-filter__item">
+                            <a href="#">Для интернет-магазина</a>
+                            <div class="product-filter-counter">
+                                242
+                            </div>
+                        </div>
+                        <div class="product-filter__item">
+                            <a href="#">Инструменты</a>
+                            <div class="product-filter-counter">
+                                289
+                            </div>
+                        </div>
+                        <div class="product-filter__item">
+                            <a href="#">Интеграция</a>
+                            <div class="product-filter-counter">
+                                89
+                            </div>
+                        </div>
+                        <div class="product-filter__item">
+                            <a href="#">Маркетинг, реклама</a>
+                            <div class="product-filter-counter">
+                                145
+                            </div>
+                        </div>
+                        <div class="product-filter__item">
+                            <a href="#">Мобильные приложения</a>
+                            <div class="product-filter-counter">
+                                4
+                            </div>
+                        </div>
+                        <div class="product-filter__item">
+                            <a href="#">Поддержка клиентов</a>
+                            <div class="product-filter-counter">
+                                69
+                            </div>
+                        </div>
+                        <div class="product-filter__item">
+                            <a href="#">Решения для Битрикс24</a>
+                            <div class="product-filter-counter">
+                                194
                             </div>
                         </div>
                     </div>
-                    <div class="articles-container__list">
-                        <div class="articles-list">
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-1.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        6 полезных библиотек для программирования на PHP. Часть 1
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Перевод публикации «30 Amazing PHP Libraries for Programmers and Developers»
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-2.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        6 полезных библиотек для программирования на PHP. Часть 2
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    pGraph — совершенно необъятная библиотека для построения объектно-ориентированных графиков. Строит диаграммы линейные, плоярные, гистограммы,
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-3.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        7 полезных инструментов Chrome для веб-разработчика
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Сочетание клавиш Ctrl + P (Cmd + P, если вы работаете на Mac). В Sublime Text подобная функция называется «Go to anything», а в Idea — «Searching Everywhere».
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-4.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        HTMLслепки для индексации ajax-сайтов поисковиками
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    С индексацией поисковыми машинами все не так гладко. Подгружаемый «на лету» контент поисковые роботы ловят нестабильно. Как быть?
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-5.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Волшебный ускоритель compress.php
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Этот маленький файл может удивительно много. Объединяет многочисленные таблицы стилей в один файл CSS. Так же поступает с множеством скриптов Javascript. Сжимает полученные файлы. Объед.
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-6.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Дизайн email для мобильных устройств
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Вы регулярно рассылаете письма настоящим и будущим заказчикам? Тогда стоит учитывать тот факт, что не менее трети из них просматривают почту на смартфонах и мобильных телефонах.
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-7.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Есть ли безопасность на FL.RU?
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Миллионы пользователей FL.RU ведут переписку между собой. Но при этом документы, приложенные к переписке, исправно индексируются Яндексом и доступны в его выдаче!
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-8.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Ещё 7 нужных инструментов Chrome для веб-разработчика
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Если в редакторе кликнуть образец цвета, появится экранная пипетка в виде лупы. Вы сможете указать цвет на одной из открытых страниц с точностью до одного пикселя.
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-9.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Ещё раз об удобных интерфейсах
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Интерфейсы большинства сайтов неудобны. Или очень неудобны. Но бывает так, что выбора нет, надо заполнять именно эту анкету, именно здесь и сейчас. Например, на шенгенскую визу, или коммунальн..
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-10.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Зачем вообще нужна техподдержка сайта?
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Техподдержка подразумевает под собой ежемесячное абонентское обслуживание вашего сайта, выявление неполадок и своевременное их устранение. Так ли она нужна?
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-11.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Как превратить смартфон в пульт управления презентацией?
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Как превратить смартфон в пульт управления презентацией? Это не очень трудная задача. Мы будем использовать браузеры, поддерживающие открытие сокетов. При помощи Node.js и Socket.io мы.
-                                </div>
-                            </div>
-                            <div class="article">
-                                <div class="marker">
-                                    Техподдержка советует
-                                </div>
-                                <div class="img-wrapper">
-                                    <a href="#">
-                                        <img src="./images/articles/article-image-12.jpg" alt="article">
-                                    </a>
-                                </div>
-                                <div class="article__title">
-                                    <a href="#">
-                                        Количество оповещений во вкладке браузера
-                                    </a>
-                                </div>
-                                <div class="article__description">
-                                    Ваш сервис должен обеспечивать активное общение пользователей, постоянное обновление контента, требующее быстрой реакции участников? Как Gmail, Facebook, Twitter? Все они используют функци.
-                                </div>
-                            </div>
+                </div>
+                <div class="product">
+                    <div class="product__header">
+                        <div class="product-image-wrapper">
+                            <img src="../images/product/product-image.png" alt="product">
                         </div>
-                        <div class="button-show-wrapper">
-                            <button class="green-button">Смотреть еще</button>
+                        <div class="product-info">
+                            <div class="manufacturer">
+                                от Мега Мир ИТ
+                            </div>
+                            <h2 class="product-title">
+                                SeoDolphin: Фильтры и склонения слов
+                            </h2>
+                            <div>
+                                <div class="old-price">
+                                    14 850 ₽
+                                </div>
+                                <div class="new-price">
+                                    12 990 ₽
+                                </div>
+                            </div>
+
+                            <div class="buttons-wrapper">
+                                <div>
+                                    <button style="display: flex; align-items: center; gap: 10px;" class="green-button">
+                                        <svg  style="width: 24px; height: 24px" class="svg-icon">
+                                            <use xlink:href="../images/product/sprite.svg#icon-cart"></use>
+                                          </svg>
+                                        <span>Купить</span>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="green-light-button">
+                                        Тестировать (14 дней)
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="without-bg-button">
+                                        Онлайн-демо
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -730,37 +538,37 @@
                         <div class="social-icons__list">
                             <div class="social-icons__item">
                                 <a href="#">
-                                    <img src="./images/footer/icon-skype.svg" alt="skype">
+                                    <img src="../images/footer/icon-skype.svg" alt="skype">
                                 </a>
                             </div>
                             <div class="social-icons__item">
                                 <a href="#">
-                                    <img src="./images/footer/icon-telegram.svg" alt="telegram">
+                                    <img src="../images/footer/icon-telegram.svg" alt="telegram">
                                 </a>
                             </div>
                             <div class="social-icons__item">
                                 <a href="#">
-                                    <img src="./images/footer/icon-viber.svg" alt="viber">
+                                    <img src="../images/footer/icon-viber.svg" alt="viber">
                                 </a>
                             </div>
                             <div class="social-icons__item">
                                 <a href="#">
-                                    <img src="./images/footer/icon-whatsapp.svg" alt="whatsapp">
+                                    <img src="../images/footer/icon-whatsapp.svg" alt="whatsapp">
                                 </a>
                             </div>
                             <div class="social-icons__item">
                                 <a href="#">
-                                    <img src="./images/footer/icon-youtube.svg" alt="youtube">
+                                    <img src="../images/footer/icon-youtube.svg" alt="youtube">
                                 </a>
                             </div>
                             <div class="social-icons__item">
                                 <a href="#">
-                                    <img src="./images/footer/icon-vk.svg" alt="vkontacte">
+                                    <img src="../images/footer/icon-vk.svg" alt="vkontacte">
                                 </a>
                             </div>
                             <div class="social-icons__item">
                                 <a href="#">
-                                    <img src="./images/footer/icon-ok.svg" alt="odnoklassniki">
+                                    <img src="../images/footer/icon-ok.svg" alt="odnoklassniki">
                                 </a>
                             </div>
                         </div>
@@ -935,6 +743,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>
