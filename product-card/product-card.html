@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Card</title>
+    <link rel="icon" type="image/png" href="../images/top-bar/favicon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="image/png" href="../images/top-bar/favicon.png">
+
+    <link rel="stylesheet" href="./bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="./fancybox/fancybox.css"/>
+
+    <link rel="stylesheet" href="../styles.css">    
     <link rel="stylesheet" href="./product-card-styles.css">
 </head>
 <body>
@@ -1235,7 +1240,7 @@
                             <div class="manufacturer">
                                 от Мега Мир ИТ
                             </div>
-                            <h2 class="product-title">
+                            <h2 class="product-main-title">
                                 SeoDolphin: Фильтры и склонения слов
                             </h2>
                             <div>
@@ -1265,6 +1270,197 @@
                                     <button class="without-bg-button">
                                         Онлайн-демо
                                     </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__screenshots">
+                        <div class="product__screenshots__title product-title">
+                            Скриншоты
+                        </div>
+                        <div class="product__screenshots__slider">
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-1.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-1.jpg" alt="screenshot"></a> </div>
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-2.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-2.jpg" alt="screenshot"></a> </div>
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-3.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-3.jpg" alt="screenshot"></a> </div>
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-4.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-4.jpg" alt="screenshot"></a> </div>
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-5.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-5.jpg" alt="screenshot"></a> </div>
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-6.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-6.jpg" alt="screenshot"></a> </div>
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-7.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-7.jpg" alt="screenshot"></a> </div>
+                            <div> <a data-fancybox data-src="../images/product/screenshots/screenshot-8.jpg" class="img-wrapper"><img src="../images/product/screenshots/screenshot-8.jpg" alt="screenshot"></a> </div>
+                    </div>
+                    </div>
+
+                    <div class="product__tabs">
+                        <div class="tab-list">
+                            <div class="tab-item active" data-tab="description">
+                                Описание
+                            </div>
+                            <div class="tab-item" data-tab="installation">
+                                Установка
+                            </div>
+                            <div class="tab-item" data-tab="support">
+                                Техподдержка
+                            </div>
+                        </div>
+                        <div class="product__tabs__body">
+                            <div class="active" data-tab="description">
+                                <div class="technical-data">
+                                    <div class="product-title">
+                                        Технические данные
+                                    </div>
+                                    <div class="technical-data__list">
+                                        <div class="technical-data__list__item">
+                                            <div class="technical-data-name">
+                                                Дата публикации:
+                                            </div>
+                                            <div class="technical-data-info">
+                                                25.06.2018
+                                            </div>
+                                        </div>
+                                        <div class="technical-data__list__item">
+                                            <div class="technical-data-name">
+                                                Версия:
+                                            </div>
+                                            <div class="technical-data-info">
+                                                1.0.1
+                                            </div>
+                                        </div>
+                                        <div class="technical-data__list__item">
+                                            <div class="technical-data-name">
+                                                Адаптивность:
+                                            </div>
+                                            <div class="technical-data-info">
+                                                Нет
+                                            </div>
+                                        </div>
+                                        <div class="technical-data__list__item">
+                                            <div class="technical-data-name">
+                                                Поддержка композита:
+                                            </div>
+                                            <div class="technical-data-info">
+                                                Нет
+                                            </div>
+                                        </div>
+                                        <div class="technical-data__list__item">
+                                            <div class="technical-data-name">
+                                                Число установок:
+                                            </div>
+                                            <div class="technical-data-info">
+                                                50 - 99 раз
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="compatible-editions">
+                                    <div class="product-title">
+                                        Совместимые редакции
+                                    </div>
+                                    <div class="compatible-editions__list">
+                                        <div class="compatible-editions__list__item">
+                                            <a href="#" target="_blank">
+                                                <span>
+                                                    Старт
+                                                </span>
+                                                <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 1.5L6 6.5L1 11.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="compatible-editions__list__item">
+                                            <a href="#" target="_blank">
+                                                <span>
+                                                    Стандарт
+                                                </span>
+                                                <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 1.5L6 6.5L1 11.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="compatible-editions__list__item">
+                                            <a href="#" target="_blank">
+                                                <span>
+                                                    Малый бизнес
+                                                </span>
+                                                <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 1.5L6 6.5L1 11.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="compatible-editions__list__item">
+                                            <a href="#" target="_blank">
+                                                <span>
+                                                    Бизнес
+                                                </span>
+                                                <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 1.5L6 6.5L1 11.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="descripton">
+                                    <div class="product-title">
+                                        Описание
+                                    </div>
+                                    <div class="description__content">
+                                        <p>
+                                            Модуль содержит дополнительные функции-фильтры для использования в шаблонах настройки SEO-свойств инфоблоков. Дополнительные функции-фильтры модуля имеют аналогичный вид встроенным функциям-фильтрам в CMS Bitrix. Модуль позволяет массово изменять метатеги на сайте с возможностью использовать свойства карточек товара, а также поддерживает возможность автоматического склонения слов.
+                                        </p>
+                                        <p>
+                                            Данный модуль позволит существенно сократить время на оптимизацию сайта, а также формировать уникальные метатеги по шаблону.
+                                        </p>
+                                        <p style="font-weight: 600;">
+                                            Доступны следующие функции-фильтры:
+                                        </p>
+                                        <ul style="padding-left: 24px;">
+                                            <li>
+                                                mmit_morphy — функция склонения слов
+                                            </li>
+                                            <li>
+                                                mmit_ifempty — функция проверки параметра на пустое значение. Если пусто, то вернуть одно значение, иначе - другое.
+                                            </li>
+                                            <li>
+                                                mmit_replace — функция регистрозависимой замены строки вхождения
+                                            </li>
+                                            <li>
+                                                mmit_ireplace — функция регистронезависимой замены строки вхождения
+                                            </li>
+                                            <li>
+                                                mmit_substr — функция обрезки текста
+                                            </li>
+                                            <li>
+                                                mmit_strip — функция удаления html-тегов
+                                            </li>
+                                            <li>
+                                                mmit_ucfirst — функция преобразования первой буквы в заглавную
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            Внимание! Функция склонения позволяет склонять только слова, словосочетания и более сложный структуры склонять она не умеет. Также могут склоняться неправильно редкоиспользуемые слова, слова, склоняемые не по общепринятым правилам.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style="padding: 34px 0;">
+                                    <a href="#" target="_blank" class="without-bg-button">
+                                        Подробнее о модуле
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-tab="installation">
+                                <div class="product-title" style="padding: 40px 0 20px 0;">
+                                    Установка
+                                </div>
+                                <div style="line-height: 140%;">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni sequi, dolorum cum pariatur, perferendis nobis dolores harum iure tempora quod sed, neque fuga placeat ipsam quisquam perspiciatis? Voluptas modi, dolorem illum sit, iusto alias eum natus sapiente placeat nulla ipsa nam earum quo inventore. Deserunt perferendis temporibus illum earum ea voluptatibus vero nostrum? Dolor cumque, aut neque veniam reiciendis at corrupti nisi ea voluptatem, facere obcaecati dolores tenetur magnam voluptatum repellendus ut odit labore laboriosam inventore quis tempore voluptatibus expedita quaerat? Commodi ducimus quo odit, at aperiam, magnam expedita minima odio aut ipsa soluta vel pariatur omnis eius sit temporibus quos tempora obcaecati, possimus voluptatibus maiores! Explicabo sint nemo hic repellendus atque magnam, sed voluptatum sapiente accusamus voluptate nobis, iusto rerum asperiores minus alias ducimus doloremque nihil! Assumenda qui voluptas voluptate in vitae placeat eum sapiente ipsa expedita consequatur, cupiditate deleniti repellat voluptatum, optio sequi est voluptatibus labore corrupti quisquam! Omnis repellendus cupiditate, eligendi eveniet, sed veritatis est quos consectetur et numquam expedita labore exercitationem animi minus atque officia corrupti beatae. Eius a quidem recusandae quibusdam cum eum labore ullam delectus saepe nisi iure et laudantium itaque reprehenderit mollitia perspiciatis minus distinctio dolores in quia explicabo odit, deleniti assumenda quo. Accusamus molestiae cupiditate quo culpa ullam, a unde ad quasi velit quidem optio aspernatur odio nulla est reprehenderit, animi quas error non illum ratione incidunt! Expedita nemo vel earum odio quasi mollitia. Ex vel culpa aspernatur perspiciatis impedit. Itaque animi esse aspernatur magnam nisi suscipit neque. Maiores quibusdam iusto sed consequatur nostrum assumenda fugit consectetur nobis suscipit doloremque aspernatur laborum atque architecto sapiente quasi iste, numquam, veniam similique vel? Quibusdam beatae, enim unde eligendi iste cumque exercitationem corporis veniam consequatur! Ullam repellat voluptatum nulla sapiente exercitationem cupiditate accusamus quisquam assumenda iste consectetur autem doloremque, tenetur quaerat nemo et, non accusantium debitis fugiat recusandae esse consequatur delectus eligendi excepturi. Natus corrupti tempora voluptatum quos soluta esse at consequuntur quisquam ullam tempore rem veniam, eveniet iste, debitis dolore numquam autem voluptate architecto eius aliquam distinctio! Exercitationem culpa obcaecati facere enim nulla unde id nobis labore quasi architecto libero veritatis, et, omnis tenetur nostrum eveniet repellendus quibusdam similique quisquam ex quaerat ad voluptatum rerum? Quam alias deleniti quas nemo, ipsam iste recusandae voluptatum vel enim odit, perferendis at! Assumenda nihil, at doloribus cumque nostrum mollitia perferendis. Animi eum neque architecto porro, laboriosam consequatur? Dolorum consectetur nisi vero aspernatur alias quibusdam eum a nostrum quisquam omnis consequatur, voluptatibus corrupti perferendis doloribus dolor ipsum aliquam eaque totam consequuntur. Tempora velit temporibus praesentium porro fuga earum accusantium nobis modi! Alias ducimus, deserunt veniam iure incidunt natus! Non tenetur assumenda aliquam recusandae culpa voluptatum aperiam obcaecati distinctio commodi necessitatibus nam nesciunt quis eaque deserunt, fuga nisi ipsum magnam consequatur, cumque ea iure perferendis. Quaerat unde temporibus blanditiis amet ab doloribus? Optio, voluptatum tempore iste voluptas minima debitis fuga odit adipisci porro eligendi? Laborum, sequi. Consequatur reprehenderit harum iusto dicta distinctio impedit quia natus accusamus voluptatibus. Non voluptate alias laudantium ea earum, reiciendis adipisci. Laborum deserunt aliquam maiores!
+                                </div>
+                            </div>
+                            <div data-tab="support">
+                                <div class="product-title" style="padding: 40px 0 20px 0;">
+                                    Техподдержка
+                                </div>
+                                <div style="line-height: 140%;">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in quaerat excepturi aperiam architecto facilis nesciunt impedit quos nam corporis necessitatibus ipsam facere id quisquam commodi perspiciatis suscipit natus neque repellendus, perferendis repellat. Quod repellendus incidunt nemo quae at nostrum odit quam corporis officia, repellat amet corrupti in dolores! Illo voluptatem, neque voluptas provident reprehenderit facilis esse possimus nulla quasi in optio autem ea nostrum accusantium quidem odio sint! Dolorem voluptate perferendis voluptatum sint porro sunt. Tempora assumenda iure eum iste accusantium officia voluptates fugiat nesciunt necessitatibus ea voluptatum cum amet hic, qui suscipit corrupti nihil magnam aliquid earum ullam doloribus quisquam nisi deleniti? Quo qui et at aperiam? Ipsa maiores impedit earum harum, saepe deserunt tempore aperiam odit modi quis suscipit ipsum eveniet, quia repellendus cumque iste, unde qui velit inventore id quaerat beatae voluptatem molestiae. Blanditiis quo ullam maxime accusamus animi quisquam, eaque voluptate vero nostrum incidunt, suscipit nulla a et nisi excepturi cupiditate voluptatibus minus, earum dolorum? Repellendus laudantium, delectus dolorum quas commodi perferendis fugiat veritatis, incidunt excepturi cum saepe minima dolor rerum tenetur! Facere maiores dolor, voluptatibus ducimus pariatur aliquid? Repellendus nihil ullam nulla maxime voluptatem in iste nobis, et deleniti minus veniam aperiam architecto officiis dolor illum porro ipsam quisquam veritatis. Eveniet cupiditate, doloremque dolore ea minima eos corporis sint aliquam, amet saepe eligendi sunt. Labore libero, facilis tenetur similique ipsum molestias. Consectetur exercitationem non vel nemo necessitatibus natus soluta neque maxime, fuga deleniti esse voluptatem architecto, cumque omnis. Nostrum, odio! Modi earum unde amet quas nulla quo quod deleniti alias pariatur ratione sequi debitis laboriosam a voluptates autem veritatis saepe magni, eos assumenda reiciendis consequatur possimus ipsa natus delectus? Est quaerat quidem sapiente possimus asperiores reiciendis doloremque delectus, incidunt voluptatem repudiandae! Consectetur tempore facere illo nostrum iste ea distinctio eum repudiandae vel, molestias vero?
                                 </div>
                             </div>
                         </div>
@@ -1490,6 +1686,9 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./fancybox/fancybox.umd.js"></script>
+    <script src="./bxslider/jquery.bxslider.js"></script>
+
     <script src="../index.js"></script>
 </body>
 </html>

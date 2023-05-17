@@ -212,6 +212,37 @@ $('.product-wrapper .filter-button-container button, .product-filter .filter-clo
 
 $('.product-sub-filter a').click((e) => $(e.target).closest('.product-filter-overlay').hasClass('active') && toggleProductFilter())
 
+
+
+//! PRODUCT SLIDER
+
+$('.product__screenshots__slider').bxSlider({
+	pager: false,
+	controls: true,
+	maxSlides: 4,
+	minSlides: 1,
+	slideMargin: 38,
+	slideWidth: 'auto',
+	nextText: `<span></span>`,
+	prevText: `<span></span>`,
+	touchEnabled: false,
+}); 
+
+Fancybox.bind('[data-fancybox]', {
+  //
+});
+
+
+//! PRODUCT TABS
+
+document.querySelectorAll('.product__tabs .tab-item').forEach(tab => {
+	tab.addEventListener('click', (e) => {
+		document.querySelectorAll('[data-tab]').forEach(item => item.classList.remove('active'))
+
+		document.querySelectorAll(`[data-tab="${e.target.dataset.tab}"]`).forEach(item => item.classList.add('active'))
+	})
+})
+
 //!
 })
 
