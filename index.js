@@ -219,6 +219,10 @@ formInstallationModule.onsubmit = (event) => {
 	}	
 }
 
+document.querySelector('[data-action="clean-input"]').addEventListener('click', (e) => {
+	e.target.closest('form').querySelector('input').value = ''
+})
+
 
     //! MENU MOBILE
 

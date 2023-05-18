@@ -80,6 +80,7 @@ input:focus {
   padding: 16px 24px;
   font-weight: 600;
   transition: .2s linear;
+  cursor: pointer;
 }
 .green-button:hover,
 .green-light-button:hover,
@@ -411,7 +412,8 @@ input:focus {
   scrollbar-color: transparent transparent;
 }
 .breadcrumb__list::-webkit-scrollbar {
-  width: 6px;
+  width: 0;
+  height: 0;
 }  
 .breadcrumb__list::-webkit-scrollbar-thumb {
   background-color: transparent;
