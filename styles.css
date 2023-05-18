@@ -637,7 +637,7 @@ input:focus {
   .footer{
     background: #F9F9F9;
     padding: 60px 0;
-    margin-top: 200px;
+    margin-top: 80px;
   }
   .footer-columns-wrapper{
     display: flex;
