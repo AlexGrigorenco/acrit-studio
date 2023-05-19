@@ -11,7 +11,7 @@ function toggleProductFilter(){
 
 $('.product-filter').click((e) => e.stopPropagation())
 
-$('.product-wrapper .filter-button-scrollContainer button, .product-filter .filter-close, .product-filter-overlay').click(toggleProductFilter);
+$('.product-wrapper .filter-button-container button, .product-filter .filter-close, .product-filter-overlay').click(toggleProductFilter);
 
 $('.product-sub-filter a').click((e) => $(e.target).closest('.product-filter-overlay').hasClass('active') && toggleProductFilter())
 
@@ -83,6 +83,71 @@ window.addEventListener('resize', () => {
 	scrollContainer.scrollLeft() + scrollContainer.innerWidth() === scrollContainer[0].scrollWidth ? $('.right-white-shadow').css('display', 'none') : $('.right-white-shadow').css('display', 'block')
 });
 
+
+
+//! INSTALLATION MODULE FORM
+
+const $formInstallationBlock = $('.installation-module-form .form-wrapper');
+$formInstallationBlock.html('<form id="installation-form" role="form">' + $formInstallationBlock.html() + '</form>');
+
+const formInstallationModule = document.querySelector('#installation-form')
+
+function validateWebsiteAddress(webAddres) {
+	const urlRegex = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z]{2,}){1,}$/;
+
+	return urlRegex.test(String(webAddres).toLowerCase());
+}
+function successFormInstallationModule(form){
+	const $input = $(form).find('input');
+
+	$input.closest('.input-wrapper').removeClass('error').addClass('success');
+	$input.closest('.input-wrapper').find('.input-info').text('Ваша заявка на установку модуля принята!');
+
+}
+function sendAjaxFormInstallationModule(form) {
+	const $form = $(form),
+		_btn = $(".button-wrapper button", $form),
+		data = $form.serializeJSON();
+
+	if (_btn.hasClass('btn-frm-sended')) {
+		return;
+	}
+
+	_btn.addClass('btn-frm-sended');
+
+	data['lead_title'] = 'Заявка на установку модуля';
+
+	$.ajax({
+		url: "#",
+		method: "POST",
+		data: data
+	}).always(function (dataResult) {
+		_btn.removeClass('btn-frm-sended');
+		successFormInstallationModule(form)
+	});
+}
+
+formInstallationModule.onsubmit = (event) => {
+	event.preventDefault()
+
+	const input = event.target.querySelector('input')
+
+	if (input.value.trim() === '') {
+		input.closest('.input-wrapper').classList.add('error')
+		input.closest('.input-wrapper').querySelector('.input-info').innerText = 'Пожалуйста, введите адрес сайта!'
+	}else{
+		if(!validateWebsiteAddress(input.value.trim())){
+			input.closest('.input-wrapper').classList.add('error')
+			input.closest('.input-wrapper').querySelector('.input-info').innerText = 'Пожалуйста, введите корректный адрес сайта! \n Пример: http://www.site.ru'
+		}else{
+			sendAjaxFormInstallationModule(formInstallationModule)
+		} 
+	}	
+}
+
+document.querySelector('[data-action="clean-input"]').addEventListener('click', (e) => {
+	e.target.closest('form').querySelector('input').value = ''
+})
 
 
 
