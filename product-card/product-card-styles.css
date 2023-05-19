@@ -13,10 +13,12 @@
 
 .product-filter,
 .product-sub-filter {
+    position: relative;
     min-width: 300px;
     background: #F9F9F9;
     border-radius: 12px;
     padding: 20px;
+    z-index: 20;
 
     display: flex;
     flex-direction: column;
@@ -580,12 +582,26 @@
 
 .info-product-fixed-block .left-white-shadow,
 .info-product-fixed-block .right-white-shadow{
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
     width: 40px;
     z-index: 60;
     background: linear-gradient(90deg, rgba(255,255,255,1) 50%, transparent 100%);
+}
+.info-product-fixed-block .left-white-shadow.active,
+.info-product-fixed-block .right-white-shadow.active{
+    display: block;
+    animation: showShadow .6s linear forwards;
+}
+@keyframes showShadow {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .info-product-fixed-block .left-white-shadow{
     left: 0;    

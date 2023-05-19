@@ -59,9 +59,9 @@ const observer = new IntersectionObserver((entries) => {
         infoProductFixedBlock.removeClass('active')
     } else {
         infoProductFixedBlock.addClass('active')
-		scrollContainer.scrollLeft() === 0 && $('.left-white-shadow').css('display', 'none')
+		scrollContainer.scrollLeft() === 0 && $('.left-white-shadow').removeClass('active')
 
-		scrollContainer.scrollLeft() + scrollContainer.innerWidth() === scrollContainer[0].scrollWidth ? $('.right-white-shadow').css('display', 'none') : $('.right-white-shadow').css('display', 'block')
+		scrollContainer.scrollLeft() + scrollContainer.innerWidth() === scrollContainer[0].scrollWidth ? $('.right-white-shadow').removeClass('active') : $('.right-white-shadow').addClass('active')
     }
   })
 })
@@ -70,17 +70,17 @@ observer.observe(productHeaderBlock[0])
 scrollContainer.on('scroll', () => {
     if (scrollContainer[0].scrollWidth > scrollContainer.innerWidth()) {
         
-        scrollContainer.scrollLeft() + scrollContainer.innerWidth() === scrollContainer[0].scrollWidth ? $('.right-white-shadow').css('display', 'none') : $('.right-white-shadow').css('display', 'block')
+        scrollContainer.scrollLeft() + scrollContainer.innerWidth() === scrollContainer[0].scrollWidth ? $('.right-white-shadow').removeClass('active') : $('.right-white-shadow').addClass('active')
 
-        scrollContainer.scrollLeft() === 0 ? $('.left-white-shadow').css('display', 'none') : $('.left-white-shadow').css('display', 'block')
+        scrollContainer.scrollLeft() === 0 ? $('.left-white-shadow').removeClass('active') : $('.left-white-shadow').addClass('active')
     } else {        
-        $('.right-white-shadow').css('display', 'none')
-        $('.left-white-shadow').css('display', 'none')
+        $('.right-white-shadow').removeClass('active')
+        $('.left-white-shadow').removeClass('active')
     }
 })
 
 window.addEventListener('resize', () => {
-	scrollContainer.scrollLeft() + scrollContainer.innerWidth() === scrollContainer[0].scrollWidth ? $('.right-white-shadow').css('display', 'none') : $('.right-white-shadow').css('display', 'block')
+	scrollContainer.scrollLeft() + scrollContainer.innerWidth() === scrollContainer[0].scrollWidth ? $('.right-white-shadow').removeClass('active') : $('.right-white-shadow').addClass('active')
 });
 
 
