@@ -1,7 +1,9 @@
 
 
+//! RENDER MENU NAV
 (function(){
-    const menuList = document.querySelector('.menu-nav-list')
+    const menuList = document.querySelector('.menu-desctop .menu-nav-list')
+    const menuMobileList = document.querySelector('.menu-mobile-wrapper .menu-nav-list')
     const subMenuHtml = `<div class="sub-menu">
                         <div class="sub-menu-list">
                             <div class="sub-menu-item">
@@ -21,7 +23,7 @@
                             </div>
                         </div>
                     </div>`
-
+    const icon = '<svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 6L8 11L3 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     const menuItems =[
         {
             title: 'Статьи',
@@ -65,13 +67,14 @@
         menuItemDiv.classList.add('menu-nav-item')
         menuItemDiv.innerHTML += `<div class="link">
                                         <a href=${menuItem.link}>${menuItem.title}</a>
-                                        ${menuItem.subMenu ? '<img class="arrow-icon" src="./images/menu-nav/arrow-down.svg" alt="arrow">' : ''}
+                                        ${menuItem.subMenu ? icon : ''}
                                   </div>
                                     
                                   <div class="underline"></div>
                                   ${menuItem.subMenu ? menuItem.subMenu : ''}`
         
         menuList.appendChild(menuItemDiv)
+        menuMobileList.appendChild(menuItemDiv.cloneNode(true))
         
     })
 

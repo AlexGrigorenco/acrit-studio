@@ -242,7 +242,9 @@
     border-radius: 4px;
     cursor: zoom-in;
 }
-
+.bx-controls {
+    width: 100%;
+}
 .bx-wrapper .bx-controls-direction a{
     background: #fff;
     z-index: 10;
