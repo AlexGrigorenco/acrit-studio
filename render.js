@@ -24,12 +24,12 @@
 
     const menuItems =[
         {
-            title: 'Каталог',
+            title: 'Статьи',
             link: window.location.pathname === '/index.html' ? './articles/articles.html' : window.location.pathname === '/product-card/product-card.html' ? '../articles/articles.html' : '#',
             subMenu: subMenuHtml,
         },
         {
-            title: 'Услуги',
+            title: 'Продукт',
             link: window.location.pathname === '/index.html' ? './product-card/product-card.html' : window.location.pathname === '/articles/articles.html' ? '../product-card/product-card.html' : '#',
             subMenu: subMenuHtml,
         },
@@ -58,7 +58,7 @@
         },
     ]
 
-    console.log(window.location.pathname)
+    
 
     menuItems.forEach(menuItem => {
         const menuItemDiv = document.createElement('div')
@@ -75,9 +75,13 @@
         
     })
 
-    menuList.querySelectorAll('.menu-nav-item').forEach((item, index) => {
-        if(index === 0){
-            item.classList.add('active')
-        }
-    })
+    if(window.location.pathname === '/articles/articles.html'){
+        menuList.querySelectorAll('a').forEach(link => {
+            link.textContent === 'Статьи' ? link.closest('.menu-nav-item').classList.add('active') : null
+        })
+    }else if(window.location.pathname === '/product-card/product-card.html'){
+        menuList.querySelectorAll('a').forEach(link => {
+            link.textContent === 'Продукт' ? link.closest('.menu-nav-item').classList.add('active') : null
+        })
+    }
 })()
