@@ -762,3 +762,18 @@
         font-size: 14px;
     }
 }
+/*! */
+.bx-wrapper{
+    position: relative;
+}
+.bx-controls{
+    position: absolute;
+    top: 50%;
+}
+.bx-controls-direction{
+    position: relative;
+}
+.bx-next,
+.bx-prev{
+    position: absolute;
+}
