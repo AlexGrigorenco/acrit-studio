@@ -27,12 +27,12 @@
     const menuItems =[
         {
             title: 'Статьи',
-            link: window.location.pathname === '/index.html' ? './articles/articles.html' : window.location.pathname === '/product-card/product-card.html' ? '../articles/articles.html' : '#',
+            link: window.location.pathname.includes('/index.html') ? './articles/articles.html' : window.location.pathname.includes('/product-card/product-card.html') ? '../articles/articles.html' : '#',
             subMenu: subMenuHtml,
         },
         {
             title: 'Продукт',
-            link: window.location.pathname === '/index.html' ? './product-card/product-card.html' : window.location.pathname === '/articles/articles.html' ? '../product-card/product-card.html' : '#',
+            link: window.location.pathname.includes('/index.html') ? './product-card/product-card.html' : window.location.pathname === '/articles/articles.html' ? '../product-card/product-card.html' : '#',
             subMenu: subMenuHtml,
         },
         {
@@ -82,7 +82,7 @@
         menuList.querySelectorAll('a').forEach(link => {
             link.textContent === 'Статьи' ? link.closest('.menu-nav-item').classList.add('active') : null
         })
-    }else if(window.location.pathname === '/product-card/product-card.html'){
+    }else if(window.location.pathname.includes('/product-card/product-card.html')){
         menuList.querySelectorAll('a').forEach(link => {
             link.textContent === 'Продукт' ? link.closest('.menu-nav-item').classList.add('active') : null
         })
@@ -91,7 +91,7 @@
 
 //! RENDER HEADER ICONS
 (function(){
-    if(window.location.pathname === '/index.html'){
+    if(window.location.pathname.includes('/index.html')){
         const headerIconsWrapper = document.querySelector('.header .header-icons-wrapper')
         const headerIcons = [
             {
