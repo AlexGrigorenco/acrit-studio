@@ -32,7 +32,7 @@
         },
         {
             title: 'Продукт',
-            link: window.location.pathname.includes('/index.html') ? './product-card/product-card.html' : window.location.pathname === '/articles/articles.html' ? '../product-card/product-card.html' : '#',
+            link: window.location.pathname.includes('/index.html') ? './product-card/product-card.html' : window.location.pathname.includes('/articles/articles.html') ? '../product-card/product-card.html' : '#',
             subMenu: subMenuHtml,
         },
         {
@@ -78,7 +78,7 @@
         
     })
 
-    if(window.location.pathname === '/articles/articles.html'){
+    if(window.location.pathname.includes('/articles/articles.html')){
         menuList.querySelectorAll('a').forEach(link => {
             link.textContent === 'Статьи' ? link.closest('.menu-nav-item').classList.add('active') : null
         })
