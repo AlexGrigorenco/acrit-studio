@@ -89,7 +89,7 @@
     }
 })();
 
-
+//! RENDER HEADER ICONS
 (function(){
     if(window.location.pathname === '/index.html'){
         const headerIconsWrapper = document.querySelector('.header .header-icons-wrapper')
@@ -143,4 +143,72 @@
         })
 
     }
+})();
+
+//! RENDER FOOTER COLUMNS
+(function(){
+    const footerColumnsWrapper = document.querySelector('.footer .footer-columns-wrapper')
+    const footerColumns = [
+        {
+            title: 'Услуги',
+            links: [
+                'Услуги разработки',
+                'Настройки интеграций с маркетплайсами',
+                'Экспертиза производительности',
+                'Абонентское обслуживание',
+                'Переход на старшие редакции',
+                'Продление решений',
+            ]
+        },
+        {
+            title: 'Лицензии Bitrix',
+            links: [
+                'Управление сайтом',
+                'Продления лицензий',
+                'Переход на высшие редакции',
+                'Битрикс24',
+                'Корпоративный портал',
+                'Подписки на Битрикс24.Маркет',
+            ]
+        },
+        {
+            title: 'Лицензии Bitrix marketplace',
+            links: [
+                'Готовые интернет-магазины',
+                'Готовые сайты',
+                'Для интернет-магазина',
+                'Инструменты',
+                'Интеграция',
+                'Маркетинг, реклама',
+                'Мобильные приложения',
+                'Поддержка клиентов',
+                'Решения для Битрикс24',
+            ]
+        },
+    ]
+
+    footerColumns.forEach(footerColumn => {
+        const columnDiv = document.createElement('div')
+        columnDiv.classList.add('footer-column')
+
+        const linkList = document.createElement('div')
+        linkList.classList.add('footer-links-list')
+        
+        footerColumn.links.forEach(link => {
+            linkDiv = document.createElement('div')
+            linkDiv.classList.add('footer-link')
+            linkDiv.innerHTML = `<a href="#">
+                                            ${link}
+                                        </a>`
+            linkList.appendChild(linkDiv)
+        })
+
+        columnDiv.innerHTML = `<div class="footer-title">
+                                    ${footerColumn.title}
+                                </div>`
+
+        columnDiv.appendChild(linkList)
+
+        footerColumnsWrapper.appendChild(columnDiv)
+    })
 })();
