@@ -1,6 +1,6 @@
 
 
-//! RENDER MENU NAV
+//! RENDER MENU NAV AND MENU MOBILE
 (function(){
     const menuList = document.querySelector('.menu-desctop .menu-nav-list')
     const menuMobileList = document.querySelector('.menu-mobile-wrapper .menu-nav-list')
@@ -87,4 +87,60 @@
             link.textContent === 'Продукт' ? link.closest('.menu-nav-item').classList.add('active') : null
         })
     }
-})()
+})();
+
+
+(function(){
+    if(window.location.pathname === '/index.html'){
+        const headerIconsWrapper = document.querySelector('.header .header-icons-wrapper')
+        const headerIcons = [
+            {
+                title: 'Идея',
+                icon: 'icon-idea',
+            },
+            {
+                title: 'Анализ',
+                icon: 'icon-analysis',
+            },
+            {
+                title: 'Проект',
+                icon: 'icon-project',
+            },
+            {
+                title: 'Дизайн',
+                icon: 'icon-design',
+            },
+            {
+                title: 'Маркетинг',
+                icon: 'icon-marketing',
+            },
+            {
+                title: 'Разработка',
+                icon: 'icon-development',
+            },
+            {
+                title: 'Наполнение',
+                icon: 'icon-content',
+            },
+            {
+                title: 'Техподдержка',
+                icon: 'icon-support',
+            },
+        ]
+
+        headerIcons.forEach(headerIcon => {
+            const iconDiv = document.createElement('div')
+            iconDiv.classList.add('header-icon')
+
+            iconDiv.innerHTML = `<a class="header-icon__link" href="#">
+                                    <svg class="svg-icon">
+                                        <use xlink:href="./images/header/sprite.svg#${headerIcon.icon}"></use>
+                                    </svg>
+                                    <span>${headerIcon.title}</span>
+                                </a>`
+
+            headerIconsWrapper.appendChild(iconDiv)
+        })
+
+    }
+})();
