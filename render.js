@@ -305,3 +305,71 @@
         })
     }
 })();
+
+//! RENDER ARTICLES FILTER
+(function(){
+    if(window.location.pathname.includes('/articles/articles.html')){
+        const filterWrapper = document.querySelector('.articles .filter-list')
+
+        const filterItems = [
+            {
+                title: 'A/B Тесты',
+                count: '6',
+            },
+            {
+                title: 'App Store',
+                count: '4',
+            },
+            {
+                title: 'Email',
+                count: '32',
+            },
+            {
+                title: 'EmMobile-friendlyail',
+                count: '10',
+            },
+            {
+                title: 'SEO Инструменты',
+                count: '19',
+            },
+            {
+                title: 'SEO-агрегаторы',
+                count: '7',
+            },
+            {
+                title: 'SMM',
+                count: '32',
+            },
+            {
+                title: 'Главное в сайте это его содержание',
+                count: '32',
+            },
+            {
+                title: 'Для новичков',
+                count: '41',
+            },
+            {
+                title: 'Инструменты',
+                count: '42',
+            },
+            {
+                title: 'Как заказать сайт',
+                count: '1',
+            },
+            {
+                title: 'Картинки',
+                count: '26',
+            },
+        ]
+
+        filterItems.forEach(item => {
+            const filterItem = document.createElement('div')
+            filterItem.classList.add('filter-item')
+
+            filterItem.innerHTML = `<a href="#">${item.title}</a>
+                                    <span class="count">${item.count}</span>`
+
+            filterWrapper.appendChild(filterItem)
+        })
+    }
+})();
