@@ -212,3 +212,96 @@
         footerColumnsWrapper.appendChild(columnDiv)
     })
 })();
+
+//! RENDER ARTICLES
+(function(){
+    if(window.location.pathname.includes('/articles/articles.html')){
+        const articlesWrapper = document.querySelector('.articles .articles-list')
+        const articles = [
+            {
+                img: '../images/articles/article-image-1.jpg',
+                title: '6 полезных библиотек для программирования на PHP. Часть 1',
+                text: 'Перевод публикации «30 Amazing PHP Libraries for Programmers and Developers»',
+            },
+            {
+                img: '../images/articles/article-image-2.jpg',
+                title: '6 полезных библиотек для программирования на PHP. Часть 2',
+                text: 'pGraph — совершенно необъятная библиотека для построения объектно-ориентированных графиков. Строит диаграммы линейные, плоярные, гистограммы,',
+            },
+            {
+                img: '../images/articles/article-image-3.jpg',
+                title: '7 полезных инструментов Chrome для веб-разработчика',
+                text: 'Сочетание клавиш Ctrl + P (Cmd + P, если вы работаете на Mac). В Sublime Text подобная функция называется «Go to anything», а в Idea — «Searching Everywhere».',
+            },
+            {
+                img: '../images/articles/article-image-4.jpg',
+                title: 'HTMLслепки для индексации ajax-сайтов поисковиками',
+                text: 'С индексацией поисковыми машинами все не так гладко. Подгружаемый «на лету» контент поисковые роботы ловят нестабильно. Как быть?',
+            },
+            {
+                img: '../images/articles/article-image-5.jpg',
+                title: 'Волшебный ускоритель compress.php',
+                text: 'Этот маленький файл может удивительно много. Объединяет многочисленные таблицы стилей в один файл CSS. Так же поступает с множеством скриптов Javascript. Сжимает полученные файлы. Объед',
+            },
+            {
+                img: '../images/articles/article-image-6.jpg',
+                title: 'Дизайн email для мобильных устройств',
+                text: 'Вы регулярно рассылаете письма настоящим и будущим заказчикам? Тогда стоит учитывать тот факт, что не менее трети из них просматривают почту на смартфонах и мобильных телефонах.',
+            },
+            {
+                img: '../images/articles/article-image-7.jpg',
+                title: 'Есть ли безопасность на FL.RU?',
+                text: 'Миллионы пользователей FL.RU ведут переписку между собой. Но при этом документы, приложенные к переписке, исправно индексируются Яндексом и доступны в его выдаче!',
+            },
+            {
+                img: '../images/articles/article-image-8.jpg',
+                title: 'Ещё 7 нужных инструментов Chrome для веб-разработчика',
+                text: 'Если в редакторе кликнуть образец цвета, появится экранная пипетка в виде лупы. Вы сможете указать цвет на одной из открытых страниц с точностью до одного пикселя.',
+            },
+            {
+                img: '../images/articles/article-image-9.jpg',
+                title: 'Ещё раз об удобных интерфейсах',
+                text: 'Интерфейсы большинства сайтов неудобны. Или очень неудобны. Но бывает так, что выбора нет, надо заполнять именно эту анкету, именно здесь и сейчас. Например, на шенгенскую визу, или коммунальн..',
+            },
+            {
+                img: '../images/articles/article-image-10.jpg',
+                title: 'Зачем вообще нужна техподдержка сайта?',
+                text: 'Техподдержка подразумевает под собой ежемесячное абонентское обслуживание вашего сайта, выявление неполадок и своевременное их устранение. Так ли она нужна?',
+            },
+            {
+                img: '../images/articles/article-image-11.jpg',
+                title: 'Как превратить смартфон в пульт управления презентацией?',
+                text: 'Как превратить смартфон в пульт управления презентацией? Это не очень трудная задача. Мы будем использовать браузеры, поддерживающие открытие сокетов. При помощи Node.js и Socket.io мы.',
+            },
+            {
+                img: '../images/articles/article-image-12.jpg',
+                title: 'Количество оповещений во вкладке браузера',
+                text: 'Ваш сервис должен обеспечивать активное общение пользователей, постоянное обновление контента, требующее быстрой реакции участников? Как Gmail, Facebook, Twitter? Все они используют функци.',
+            },
+        ]
+
+        articles.forEach(item => {
+            const article = document.createElement('div')
+            article.classList.add('article')
+
+            article.innerHTML = `<div class="marker">
+                                    Техподдержка советует
+                                </div>
+                                <div class="img-wrapper">
+                                    <a href="#">
+                                        <img src=${item.img} alt="article">
+                                    </a>
+                                </div>
+                                <div class="article__title">
+                                    <a href="#">
+                                        ${item.title}
+                                    </a>
+                                </div>
+                                <div class="article__description">
+                                    ${item.text}
+                                </div>`
+
+            articlesWrapper.appendChild(article)
+        })
+    }
+})();
