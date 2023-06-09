@@ -373,3 +373,144 @@
         })
     }
 })();
+
+
+//! RENDER PRODUCT FILTER
+
+(function(){
+    if(window.location.pathname.includes('/product-card/product-card.html')){
+        const filterWrapper = document.querySelector('.product-filter-overlay .product-filter')
+        const subFilterItem = `<div class="product-sub-filter">
+                                <div class="product-sub-filter__item">
+                                    <a href="#">B2B</a>
+                                    <div class="product-sub-filter-counter">
+                                        4
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Авто</a>
+                                    <div class="product-sub-filter-counter">
+                                        11
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Бытовая техника и электроника</a>
+                                    <div class="product-sub-filter-counter">
+                                        25
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Детские товары</a>
+                                    <div class="product-sub-filter-counter">
+                                        9
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Другое</a>
+                                    <div class="product-sub-filter-counter">
+                                        14
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Красота и здоровье</a>
+                                    <div class="product-sub-filter-counter">
+                                        4
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Мебель</a>
+                                    <div class="product-sub-filter-counter">
+                                        7
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Мобильные приложения </a>
+                                    <div class="product-sub-filter-counter">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Одежда</a>
+                                    <div class="product-sub-filter-counter">
+                                        17
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Подарки и сувениры</a>
+                                    <div class="product-sub-filter-counter">
+                                        8
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Продукты питания</a>
+                                    <div class="product-sub-filter-counter">
+                                        17
+                                    </div>
+                                </div>
+                                <div class="product-sub-filter__item">
+                                    <a href="#">Ремонт</a>
+                                    <div class="product-sub-filter-counter">
+                                        12
+                                    </div>
+                                </div>
+                            </div>`
+        const filterItems = [
+            {
+                title: 'Готовые интернет-магазины',
+                count: '169',
+            },
+            {
+                title: 'Готовые сайты',
+                count: '463',
+            },
+            {
+                title: 'Для интернет-магазина',
+                count: '242',
+            },
+            {
+                title: 'Инструменты',
+                count: '289',
+            },
+            {
+                title: 'Интеграция',
+                count: '89',
+            },
+            {
+                title: 'Маркетинг, реклама',
+                count: '145',
+            },
+            {
+                title: 'Мобильные приложения',
+                count: '4',
+            },
+            {
+                title: 'Поддержка клиентов',
+                count: '69',
+            },
+            {
+                title: 'Решения для Битрикс24',
+                count: '194',
+            },
+        ]
+
+        filterItems.forEach(filterItem => {
+            const item = document.createElement('div')
+            item.classList.add('product-filter__item')
+
+            item.innerHTML = `<div class="product-filter__item__link">
+                                    <a href="#">${filterItem.title}</a>
+                                    <div class="product-filter-counter">
+                                        ${filterItem.count}
+                                    </div>
+                                </div>
+                                <div class="product-filter__item__arrow">
+                                    <img src="../images/product/CaretDown.svg" alt="arrow">
+                                </div>
+                                <div class="product-sub-filter-wrapper">
+                                    ${subFilterItem}
+                                </div>`
+
+            filterWrapper.appendChild(item)
+        })
+    }
+})();
