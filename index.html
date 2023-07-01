@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./main_page_inner.css">
     <link rel="icon" type="image/png" href="./images/top-bar/favicon.png">
 
 </head>
@@ -154,6 +157,35 @@
         </div>
     </header>
 
+    <!--!добавлены классы, добавлена обёртка для iframe, убраны атрибуты у iframe отвечающие за размер видео -->
+    <section class="hidden-xs videos" style="padding:20px 0px;">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/EWHUGHx_qro" title="Выгрузка товаров на торговые агрегаторы с помощью модуля экспорта на торговые порталы" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/2OFengw-r-U" title="Развитие сети точек продаж интернет магазина" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--!добавлен класс, h1 поменял на h2 (т.к. h1 есть в шапке), обернул h2 в container -->
+    <div class="main-title-wrapper py-4" style="text-align:center;">
+        <div class="container">
+            <h2>Разработка модулей для 1С-Битрикс, интеграции интернет магазинов на 1С Битрикс</h2>
+        </div>
+    </div>
+
+    <!--! в блоке с классом section-whitebg за блоком с классом useful-mp-links следует тег h2, ему надо добавить класс "pb-3" -->
+
+    
+
     <footer class="footer">
         <div class="container">
             <div class="footer-columns-wrapper">
@@ -245,6 +277,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./render.js"></script>
     <script src="./index.js"></script>
 </body>
