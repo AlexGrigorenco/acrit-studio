@@ -1,28 +1,142 @@
 
 
-<!--!добавлены классы, добавлена обёртка для iframe, убраны атрибуты у iframe отвечающие за размер видео -->
-<section class="hidden-xs videos" style="padding:20px 0px;">
+<!--? БЛОК С ВИДЕО -->
+<section class="hidden-xs videos" style="padding:20px 0px;"><!--! добавить класс  videos-->
     <div class="container">
-        <div class="video-container">
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/EWHUGHx_qro" title="Выгрузка товаров на торговые агрегаторы с помощью модуля экспорта на торговые порталы" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0"></iframe>
+        <div class="video-container"><!--! добавить класс  video-container, убрать класс row-->
+            <div class="video-item"><!--! добавить класс  video-item, убрать класс col-md-6-->
+                <div class="video-wrapper"><!--! добавлена обёртка для iframe с классом video-wrapper-->
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/EWHUGHx_qro" title="Выгрузка товаров на торговые агрегаторы с помощью модуля экспорта на торговые порталы" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0"></iframe><!--! убраны атрибуты у iframe отвечающие за размер видео (width="560" height="315")-->
                 </div>
             </div>
             <div class="video-item">
                 <div class="video-wrapper">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/2OFengw-r-U" title="Развитие сети точек продаж интернет магазина" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0"></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/2OFengw-r-U" title="Развитие сети точек продаж интернет магазина" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0"></iframe><!--! убраны атрибуты у iframe отвечающие за размер видео (width="560" height="315" )-->
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!--!добавлен класс, h1 поменял на h2 (т.к. h1 есть в шапке), обернул h2 в container -->
-<div class="main-title-wrapper py-4" style="text-align:center;">
-    <div class="container">
-        <h2>Разработка модулей для 1С-Битрикс, интеграции интернет магазинов на 1С Битрикс</h2>
+
+<!--? ПЕРВЫЙ ЗАГОЛОВОК -->
+<div class="main-title-wrapper py-4" style="text-align:center;"><!--!добавлен классы main-title-wrapper py-4 -->
+    <div class="container"><!--! обернул h2 в container -->
+        <h2>Разработка модулей для 1С-Битрикс, интеграции интернет магазинов на 1С Битрикс</h2><!--! h1 поменял на h2 (т.к. h1 есть в шапке) -->
     </div>
 </div>
 
 <!--! в блоке с классом section-whitebg за блоком с классом useful-mp-links следует тег h2, ему надо добавить класс "pb-3" -->
+
+
+
+<!--? БЛОК С МОДУЛЯМИ -->
+
+<div class="shop-modules"><!--! убрать класс row -->
+    
+    <div class="shop-module-wrapper" id="bx_3966226736_196047"><!--! убрать все бутстрап-классы, добавить класс shop-module-wrapper
+    -->
+        <div class="shop-module">
+            <div class="pseudo_a clearfix">
+                <div class="shop-module__image">
+                                            <a href="/market/module/acrit.exportfile/"><img src="/upload/iblock/d2f/st5e2y2gkz72tk4dkrkvhbfm71cqrs0e/acrit_exportfile.png" alt="Экспорт в Excel, CSV, JSON, XML"></a>
+                </div>
+
+                <div class="shop-module__data">
+                    <div class="shop-module__description">
+                        <a href="/market/module/acrit.exportfile/">Экспорт в Excel, CSV, JSON, XML</a>
+                    </div>
+
+                                                <div class="shop-module__price">
+                            7 990 руб							</div>
+                                            
+                    
+
+                    <div class="btn-cat">
+                        <!--noindex-->
+                                                        <a rel="nofollow" class="btn btn-sm btn-primary put-to-cart" href="/?2023=&amp;action=BUY&amp;id=196047"><i class="fa fa-shopping-cart"> </i> Купить</a><br><!--! после первой кнопки добавить тег <br> -->
+
+                                                                <a class="btn btn-sm btn-info get-testing" href="/market/module/acrit.exportfile/"><i class="fa-solid fa-computer-classic"></i>Тестировать
+                                    (10 дней)</a><!--! второй кнопке добавить класс get-testing -->
+                                                                                    <!--/noindex-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--! в блоке с id studio есть блок с классом about_widget, уэтого блока надо убрать бутстрап-класс "text-right" -->
+
+
+<!--? ГОТОВЫЕ РЕШЕНИЯ -->
+<section id="solutions" class="section-whitebg bg4 dm-shadow">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2 class="bigtitle">Готовые решения</h2>
+            <h4 class="lead">Предлагаем быстрый старт с минимальными затратами, адаптивный дизайн.</h4>
+            <hr>
+        </div>
+        <!-- end section-title -->
+        <div class="general_wrapper clearfix">
+            <div class="solution-image-wrapper"><!--! убрать все бутстрап классы, добавить класс solution-image-wrapper-->
+                <div class="entry effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;">
+                    <a href="/services/"><img alt="Готовые решения" data-src="/bitrix/templates/acrit-studio.ru/images/main-sol.png" class="lazy img-responsive loaded" src="./images/ready-made-solution/main-sol.png" data-was-processed="true"></a><span class="magnifier"></span>
+                </div>
+            </div>
+            <!-- end col-lg-6 -->
+            <div class="solution-text-wrapper"><!--! убрать все бутстрап классы, добавить класс solution-text-wrapper-->
+                <div class="about_widget text-left effect-slide-right in" data-effect="slide-right" style="transition: all 0.7s ease-in-out 0s;">
+                    <div class="widget-title">
+                        <h3>Что такое готовое решение и почему его стоит выбрать?</h3>
+                    </div>
+                    <!-- end servicetitle -->
+                    <p>
+                        Готовое решение — это тиражный сайт, дизайн и функционал которого разработали профессионалы. Он протестирован и полностью готов к работе.
+                    </p>
+                    <p>
+                        Преимущества покупки готового решения состоит в его стоимости по сравнению с разработкой индивидуального дизайна. При этом дизайн готового решения может быть переделан под Вашу компанию.
+                    </p>
+                    <p>
+                        Ещё один плюс - время на разработку. При покупки готово решения, полноценный интернет-магазин и корпоративный портал можно запустить за 5 дней.
+                    </p>
+                    <p>
+                        Таким образом готовое решение — идеальный вариант для тех, кто быстро запустить проект и посмотреть как он будет работать и приносить прибыль. А затем развивать его анализируя опыт.
+                    </p>
+                    <a href="/services/" class="btn btn-primary" target="_blank"><i class="fa fa-info-circle"></i> Подробнее</a>
+                </div>
+                <!-- end about widget -->
+            </div>
+            <!-- end col-lg-6 -->
+        </div>
+        <!-- general --> 	</div>
+            <!-- end container --> </section>
+
+<!--! в блоке "НАШИ ПАРТНЕРЫ" тегу section добавить класс "our-partners", в него вложен блок с классом container, далее вложен блок с классом hidden-xs, в него вложен тег с классами "col-md-12 col-xs-6" - эти классы надо удалить -->
+
+
+<!--? Форма обратной связи -->
+<section id="feedback" class="section-darkbg dm-shadow">
+	<div class="container">
+		<div class="section-title text-center">
+            <!-- ... -->
+		</div>
+		<!-- end section-title -->
+		<div class="general_wrapper clearfix">
+			<div class=""><!--! удалить классы "col-lg-3 col-md-3 col-sm-12" -->			
+				<!-- ... -->
+			</div>
+			
+			<div class=""><!--! удалить классы "col-lg-6 col-md-6 col-sm-12" -->
+                <!-- ... -->
+            </div>
+			<div class="col-lg-3 col-md-3 hidden-xs"><!--! удалить классы "col-lg-3 col-md-3 hidden-xs" -->				
+				<!-- ... -->
+			</div>
+			<!-- end col-lg-3 -->
+		</div>
+		<!-- end general_wrapper -->
+	</div>
+	<!-- end container --> </section>

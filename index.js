@@ -202,6 +202,29 @@ $('.articles .filter-button-container button, .articles .filter-overlay .filter-
 $('.articles .filter-item a').click((e) => $(e.target).closest('.filter-overlay').hasClass('active') && toggleArticlesFilter())
 
 
+//! SHOW BLOCKS
+
+const blocks = document.querySelectorAll('.animated-block')
+
+function showHiddeBlocks(){
+	const trigger = (window.innerHeight / 10) * 9;
+	console.log(trigger)
+	
+	blocks.forEach(block => {
+		const topOfBlock = block.getBoundingClientRect().top;
+		console.log(topOfBlock)
+
+		if(topOfBlock < trigger){
+			block.classList.add('animation-active');
+		} else{
+			block.classList.remove('animation-active');
+		}
+	})
+}
+
+window.addEventListener('scroll', showHiddeBlocks);
+
+
 //!
 })
 

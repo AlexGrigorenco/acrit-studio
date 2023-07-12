@@ -1,0 +1,21 @@
+
+
+.shop-module__description a:hover{
+    color: #000;
+    transition: .2s linear;
+}
+
+.about_widget a:hover{
+    background: #4ead00;
+  }
+
+  .our-partners .clients_wrapper .clients{
+    align-items: stretch;
+  }
+  .our-partners .clients_wrapper .clients li{
+    padding: 6px;
+  }
+
+  #feedback .support_details .support_widget::after{
+    top: -10px !important;
+  }
